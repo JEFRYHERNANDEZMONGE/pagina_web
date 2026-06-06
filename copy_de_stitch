@@ -1,0 +1,1737 @@
+<!-- Software - HMS Ucomer (Contenido Real) -->
+<!DOCTYPE html>
+
+<html class="light" lang="es" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Software HMS Ucomer - Control Retail de Vanguardia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e1e3e4",
+                        "surface": "#f8f9fa",
+                        "outline-variant": "#c2c7c9",
+                        "on-secondary-container": "#5c6a2b",
+                        "on-tertiary-fixed": "#071e27",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#273c46",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary": "#566426",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d9dadb",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#344a54",
+                        "on-error": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "surface-variant": "#e1e3e4",
+                        "on-background": "#191c1d",
+                        "tertiary-fixed-dim": "#b3cad6",
+                        "secondary-fixed-dim": "#bdce83",
+                        "tertiary": "#102630",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#0e272d",
+                        "outline": "#72787a",
+                        "primary-container": "#253d43",
+                        "primary-fixed-dim": "#b1cbd2",
+                        "on-secondary-fixed": "#171e00",
+                        "on-tertiary-container": "#90a6b2",
+                        "primary-fixed": "#cde7ee",
+                        "on-surface-variant": "#42484a",
+                        "secondary-fixed": "#d9eb9d",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container-low": "#f3f4f5",
+                        "on-primary-container": "#8ea7ae",
+                        "tertiary-fixed": "#cfe6f2",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#051f24",
+                        "background": "#f8f9fa",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#d9eb9d",
+                        "on-surface": "#191c1d",
+                        "inverse-primary": "#b1cbd2",
+                        "on-primary-fixed-variant": "#324a51",
+                        "on-secondary-fixed-variant": "#3e4c0f",
+                        "surface-tint": "#4a6269",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "title-lg": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "display": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                        "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(114, 120, 122, 0.1);
+        }
+        .bento-item {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-item:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="full-width top-0 sticky bg-surface border-b border-outline-variant z-50">
+<div class="max-w-[1120px] mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="text-title-lg font-title-lg font-bold text-primary">HMS Ucomer</div>
+<div class="hidden md:flex gap-md items-center">
+<a class="font-body-lg text-body-lg text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Servicios</a>
+<a class="font-body-lg text-body-lg text-primary font-bold border-b-2 border-primary pb-1 cursor-pointer" href="#">Software</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Metodología</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Empresa</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-md py-base font-label-md rounded-lg hover:bg-primary transition-colors duration-200 cursor-pointer active:opacity-80">
+                Contactar
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-primary py-xl md:py-[120px]">
+<div class="max-w-[1120px] mx-auto px-margin-desktop relative z-10 grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="space-y-md">
+<span class="inline-block px-sm py-xs bg-secondary-container text-on-secondary-fixed font-label-sm uppercase tracking-widest rounded-full">Solución Tecnológica</span>
+<h1 class="text-on-primary font-display text-display md:leading-[64px]">Tecnología de Vanguardia para el Control Retail</h1>
+<p class="text-on-primary-container font-body-lg text-body-lg max-w-lg">
+                        Empoderamos a su equipo con herramientas analíticas de alta precisión. Gestione cada punto de venta con datos en tiempo real y una arquitectura diseñada para la excelencia operativa.
+                    </p>
+<div class="pt-sm">
+<button class="bg-secondary text-on-secondary px-lg py-md rounded-lg font-label-md hover:brightness-110 transition-all flex items-center gap-base shadow-lg">
+                            Solicitar Demo del Sistema
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative">
+<img alt="Software Dashboard" class="rounded-xl shadow-2xl border border-outline/20 w-full object-cover aspect-video" data-alt="A professional laptop display showcasing a sophisticated retail analytics dashboard with multiple data visualizations, heatmaps, and performance charts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUOVvEX6oWdBMSq_G0AG9V0y37d_TXGq2DM_fPtIJdb-sf8-i8fTjbI4-AXAGz259nlqyRnQ0GyKLmaUpJxcUpbarnLpQmsHaGbkPtaL8dFo2RuYoX-hyaNYUtyevOCg6dP01isZ2aT1KkYT9HxKei_4mtHpIY01A5UhhfRM-kTH5-GPiGtGJIQZa8i5-javueFcd7W6hgwFl4ajSKK4aolP2lS7w7lcSbghDXe-SaVsyFWentI3N3fPQU93tXfjluupfJDifE-iw"/>
+<div class="absolute -bottom-6 -left-6 hidden md:block bg-surface-container-lowest p-md rounded-xl border border-outline-variant shadow-xl">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="query_stats">query_stats</span>
+</div>
+<div>
+<p class="font-label-sm text-on-surface-variant">Precisión Auditada</p>
+<p class="font-title-lg text-primary font-bold">99.8%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Abstract background shape -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-primary-container opacity-20 -skew-x-12 translate-x-1/2"></div>
+</section>
+<!-- Nuestra Plataforma Section -->
+<section class="py-xl bg-surface-container-low">
+<div class="max-w-[1120px] mx-auto px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Nuestra Plataforma</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Una solución integral que conecta el trabajo de campo con la toma de decisiones estratégica mediante dos ecosistemas integrados.</p>
+<div class="flex items-center justify-center gap-3 mt-4 animate-fade-in">
+<div class="h-px w-8 bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-secondary font-semibold uppercase tracking-widest">Powered by</span>
+<img alt="Zamy Labs" class="h-5 w-auto filter grayscale hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXA34UMGXxaN_HA8TDuGr7qtD8e4fgXhHPIWlPeDdaLCK9ZSgZ_2I3oSU-HAr5MEVjx38eVZoscibAqReoueqe_V-yaOe2mWK9Ah8v7n8yTzoiu3rNrEuXWF_XUh63-p3yU4DPeuT3KgKFjaKcklSKZDqPwYtG3XGEbrlXK-7gzsg8GKlRSUOzh7cFvYGfrYgln2SafkqEDqpAB-4CZv_2E31xA4t6eRM-ltx8dd85ir-xvZ_lmQQW0_ITAlyuij3eudZd6UMAjjSiI"/>
+</div>
+<div class="h-px w-8 bg-outline-variant"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- App Móvil -->
+<div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+<div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-surface text-[32px]" data-icon="smartphone">smartphone</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">App Móvil para Auditores</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Diseñada para la máxima eficiencia en el punto de venta. Permite a los auditores recolectar datos estructurados, capturar evidencia fotográfica y registrar métricas críticas, incluso en entornos sin conectividad.
+                        </p>
+<div class="flex flex-wrap gap-xs pt-base">
+<span class="px-sm py-1 bg-surface-container-highest rounded-full font-label-sm text-on-surface">iOS &amp; Android</span>
+<span class="px-sm py-1 bg-surface-container-highest rounded-full font-label-sm text-on-surface">Captura Fotográfica</span>
+<span class="px-sm py-1 bg-surface-container-highest rounded-full font-label-sm text-on-surface">Validación por GPS</span>
+</div>
+</div>
+<!-- Dashboard Web -->
+<div class="glass-card p-lg rounded-xl flex flex-col gap-md">
+<div class="w-16 h-16 bg-secondary rounded-xl flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-surface text-[32px]" data-icon="dashboard">dashboard</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Dashboard Web para Clientes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Visualice el rendimiento de su red retail en un centro de comando unificado. Transformamos los datos en insights accionables mediante visualizaciones dinámicas, filtros avanzados y alertas de cumplimiento automáticas.
+                        </p>
+<div class="flex flex-wrap gap-xs pt-base">
+<span class="px-sm py-1 bg-surface-container-highest rounded-full font-label-sm text-on-surface">Analytics 360</span>
+<span class="px-sm py-1 bg-surface-container-highest rounded-full font-label-sm text-on-surface">Alertas en Vivo</span>
+<span class="px-sm py-1 bg-surface-container-highest rounded-full font-label-sm text-on-surface">Multi-empresa</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Funcionalidades -->
+<section class="py-xl bg-surface">
+<div class="max-w-[1120px] mx-auto px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-lg">Capacidades del Sistema</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md auto-rows-[200px]">
+<!-- Sincronización Offline -->
+<div class="md:col-span-4 md:row-span-2 bento-item bg-primary-container p-lg rounded-xl flex flex-col justify-between text-on-primary-container overflow-hidden relative">
+<div class="z-10">
+<span class="material-symbols-outlined text-[40px] mb-md" data-icon="cloud_off">cloud_off</span>
+<h4 class="font-headline-md text-headline-md mb-base">Sincronización Offline</h4>
+<p class="font-body-md text-body-md opacity-80">El auditor nunca se detiene. Los datos se almacenan localmente y se sincronizan automáticamente al recuperar la señal.</p>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[200px]" data-icon="sync">sync</span>
+</div>
+</div>
+<!-- Geolocalización -->
+<div class="md:col-span-8 md:row-span-1 bento-item bg-surface-container-lowest border border-outline-variant p-lg rounded-xl flex items-center gap-lg">
+<div class="w-16 h-16 bg-secondary-fixed rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-fixed text-[32px]" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary font-bold">Geolocalización de Visitas</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Trazabilidad total. Validamos que cada auditoría se realice en las coordenadas exactas del punto de venta asignado.</p>
+</div>
+</div>
+<!-- Dashboards Tiempo Real -->
+<div class="md:col-span-5 md:row-span-1 bento-item bg-surface-container-highest p-lg rounded-xl flex flex-col justify-center">
+<div class="flex items-center gap-sm mb-xs">
+<div class="w-2 h-2 rounded-full bg-error animate-pulse"></div>
+<h4 class="font-title-lg text-title-lg text-primary font-bold">Dashboards en Real Time</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">La información fluye de la tienda a su pantalla en segundos, permitiendo reacciones tácticas inmediatas.</p>
+</div>
+<!-- Exportación de Datos -->
+<div class="md:col-span-3 md:row-span-1 bento-item bg-secondary-container border border-outline-variant p-lg rounded-xl flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-on-secondary-fixed mb-xs" data-icon="file_export">file_export</span>
+<h4 class="font-label-md text-on-secondary-fixed">Exportación Excel/PDF</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Security Section -->
+<section class="py-xl bg-primary text-on-primary">
+<div class="max-w-[1120px] mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-md">Infraestructura Segura y Confiable</h2>
+<div class="space-y-lg">
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="cloud_done">cloud_done</span>
+<div>
+<h5 class="font-title-lg text-title-lg font-bold">Datos en la Nube</h5>
+<p class="text-on-primary-container font-body-md mt-xs">Hospedaje en centros de datos de clase mundial con backups redundantes y encriptación de extremo a extremo.</p>
+</div>
+</div>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="admin_panel_settings">admin_panel_settings</span>
+<div>
+<h5 class="font-title-lg text-title-lg font-bold">Acceso Jerárquico por Roles</h5>
+<p class="text-on-primary-container font-body-md mt-xs">Defina con precisión quién puede ver qué. Desde visibilidad granular por tienda hasta resúmenes ejecutivos nacionales.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-2xl">
+<img alt="Security Dashboard Mockup" class="w-full h-full object-cover min-h-[400px]" data-alt="Security interface on professional devices." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALRrGZwcf3pmqjBn0rMuebFSIlu3_ezGPyaT2zA3rCYXFAuxcUES2D5T_KLes0S3Dt1blY_pf8zwS6wz9_ov__3r818VBYGyF5VYD39tDmrnkZCBbz2JaLhq79IYQYM0kdzM-q6uYSCaTPOWd8D-Q9QaOnl3pNkimxBemmXijs8wW-inLj1DOQ3Yq9sxANWvyeEi30karBQoNCRCDm04wkiVzE8_t1x8bvPjcPVdcFrWrdkubegzeZIFC0CeDhABtCMQ9_gTUec1s"/>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="full-width bg-surface-container-lowest border-t border-outline-variant pt-lg pb-md">
+<div class="max-w-[1120px] mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg mb-lg">
+<!-- Brand & Info -->
+<div class="space-y-base text-center md:text-left">
+<div class="text-headline-md font-headline-md text-primary">HMS Ucomer</div>
+<p class="font-body-md text-on-surface-variant">Líderes en servicios de auditoría, control y tecnología para el sector retail en Costa Rica.</p>
+<p class="font-label-md text-on-surface-variant italic">© 2024 HMS Ucomer Costa Rica. Todos los derechos reservados.</p>
+</div>
+<!-- Contact Info -->
+<div class="space-y-base text-center md:text-left">
+<span class="font-label-sm text-secondary font-semibold uppercase tracking-widest">Contacto</span>
+<div class="flex flex-col gap-xs mt-sm">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center md:justify-start gap-xs" href="mailto:jyghernandez@outlook.com">
+<span class="material-symbols-outlined text-[18px]" data-icon="mail">mail</span>
+                                jyghernandez@outlook.com
+                            </a>
+<div class="font-body-md text-on-surface-variant flex items-center justify-center md:justify-start gap-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="call">call</span>
+                                +506 6102 5937 / +506 6110 4306
+                            </div>
+</div>
+</div>
+<!-- Links -->
+<div class="space-y-base text-center md:text-left">
+<span class="font-label-sm text-secondary font-semibold uppercase tracking-widest">Navegación</span>
+<div class="flex flex-wrap justify-center md:justify-start gap-md mt-sm">
+<a class="font-label-md text-on-surface-variant hover:text-secondary underline transition-all" href="#">Privacidad</a>
+<a class="font-label-md text-on-surface-variant hover:text-secondary underline transition-all" href="#">Términos</a>
+<a class="font-label-md text-on-surface-variant hover:text-secondary underline transition-all" href="#">Soporte</a>
+<a class="font-label-md text-on-surface-variant hover:text-secondary underline transition-all" href="#">LinkedIn</a>
+<a class="font-label-md text-on-surface-variant hover:text-secondary underline transition-all" href="#">Facebook</a>
+</div>
+</div>
+</div>
+<!-- Developer Attribution -->
+<div class="border-t border-outline-variant pt-md flex flex-col items-center gap-base">
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">Desarrollado por:</span>
+<div class="flex items-center gap-xs">
+<img alt="Zamy Labs Logo" class="h-8 w-auto grayscale opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdeBZv-4La6B302dIEYdD9Rg8TG902mEHBieIomKxOfT7BFp6wV6b1P7FgrXaeSYTC-1CjC-3Y33c_TNJZ4G5c7AtjRc8Wa19-xCq0SwIKTO_RENws4d3jG1p5h8dbvvNe8S3GrxXq_ob6X8MCJkHmxdM4L7kDA4tROp_WNDhutihyGWZzIDykuI_wLVZYI6AT90tBp-Qj6SBHB4jGamGM8A8QODB1TRQxPW_MJMCI1Ez-e_Y1cojrS5GWfb8eGi_mZucZQ4StERA"/>
+<span class="font-label-md text-primary font-bold">Zamy Labs</span>
+</div>
+</div>
+</div>
+</footer>
+</main>
+<script>
+        // Micro-interactions and subtle effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.glass-card, .bento-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.6s cubic-bezier(0.22, 1, 0.36, 1)';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body></html>
+
+<!-- Nuestra Empresa - HMS Ucomer (Contenido Real) -->
+<!DOCTYPE html>
+
+<html lang="es" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Empresa - HMS Ucomer Costa Rica</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e1e3e4",
+                        "surface": "#f8f9fa",
+                        "outline-variant": "#c2c7c9",
+                        "on-secondary-container": "#5c6a2b",
+                        "on-tertiary-fixed": "#071e27",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#273c46",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary": "#566426",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d9dadb",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#344a54",
+                        "on-error": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "surface-variant": "#e1e3e4",
+                        "on-background": "#191c1d",
+                        "tertiary-fixed-dim": "#b3cad6",
+                        "secondary-fixed-dim": "#bdce83",
+                        "tertiary": "#102630",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#0e272d",
+                        "outline": "#72787a",
+                        "primary-container": "#253d43",
+                        "primary-fixed-dim": "#b1cbd2",
+                        "on-secondary-fixed": "#171e00",
+                        "on-tertiary-container": "#90a6b2",
+                        "primary-fixed": "#cde7ee",
+                        "on-surface-variant": "#42484a",
+                        "secondary-fixed": "#d9eb9d",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container-low": "#f3f4f5",
+                        "on-primary-container": "#8ea7ae",
+                        "tertiary-fixed": "#cfe6f2",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#051f24",
+                        "background": "#f8f9fa",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#d9eb9d",
+                        "on-surface": "#191c1d",
+                        "inverse-primary": "#b1cbd2",
+                        "on-primary-fixed-variant": "#324a51",
+                        "on-secondary-fixed-variant": "#3e4c0f",
+                        "surface-tint": "#4a6269",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "title-lg": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "display": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                        "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-lg">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim full-width top-0 sticky z-50 border-b border-outline-variant dark:border-outline">
+<nav class="max-w-[1120px] mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="text-title-lg font-title-lg font-bold text-primary dark:text-primary-fixed-dim">
+            HMS Ucomer
+        </div>
+<div class="hidden md:flex gap-md">
+<a class="text-on-surface-variant font-medium font-body-lg text-body-lg hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Servicios</a>
+<a class="text-on-surface-variant font-medium font-body-lg text-body-lg hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Software</a>
+<a class="text-on-surface-variant font-medium font-body-lg text-body-lg hover:text-primary transition-colors duration-200 cursor-pointer" href="#">Metodología</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-body-lg text-body-lg cursor-pointer" href="#">Empresa</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-md py-xs rounded-lg font-label-md text-label-md hover:bg-primary transition-all duration-200 active:opacity-80">
+            Contactar
+        </button>
+</nav>
+</header>
+<main class="max-w-[1120px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<!-- Hero Section -->
+<section class="mb-xl text-center md:text-left">
+<h1 class="font-display text-display text-primary mb-md">
+            Liderazgo en Auditoría Retail en Costa Rica
+        </h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl mb-lg">
+            HMS Ucomer es el referente indiscutible en la precisión de datos para el punto de venta. Con una trayectoria sólida en el mercado local, transformamos la auditoría en decisiones estratégicas.
+        </p>
+<div class="h-1 bg-secondary w-24 mb-xl"></div>
+</section>
+<!-- History & Values Bento Grid -->
+<section class="mb-xl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md">
+<!-- Historia -->
+<div class="md:col-span-7 bg-surface-container-lowest p-lg border border-outline-variant rounded-xl flex flex-col justify-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Trayectoria</h2>
+<p class="text-on-surface-variant font-body-md text-body-md mb-md">
+                    Fundada el <span class="font-bold text-primary">1 de junio de 2015</span>, HMS Ucomer nació bajo la premisa de la excelencia operativa y ha evolucionado hasta convertirse en un pilar de la auditoría retail en el país. Nuestra historia está marcada por la adaptación tecnológica y un conocimiento profundo del mercado costarricense.
+                </p>
+<p class="text-on-surface-variant font-body-md text-body-md">
+                    Hoy operamos con presencia en las cadenas de consumo masivo más importantes, incluyendo <span class="font-semibold">Walmart, Automercado, Megasuper, Gessa</span> y otros puntos de venta clave en todo el territorio nacional.
+                </p>
+</div>
+<!-- Image Accent -->
+<div class="md:col-span-5 relative min-h-[300px] overflow-hidden rounded-xl border border-outline-variant">
+<img alt="HMS Ucomer Retail Excellence" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0XhqkStkwK44mBzVmMd41on-QkhVGgJJW-aIl1yO-LS2r-yJGqI_QilnanFO5UJRsyzudo4bLkuLIDFYmFgH7CMrl5RP8mEufytaqL-2xoLI7rpTbEcIAfnEkEqcTrh8h6gQGx3OIoYfsYeUonAxYRQLpRA3JpMX4P_52i-TYX3j7bDULo9v8A8XewK33ndhSNoSSEXlnukmCR424ogZeqfXyg0IYITIFZyDG2O6w4gPsY9m-jC6IH892CD9hohpk48ZNEWBVkzk"/>
+</div>
+<!-- Mission & Vision Cards -->
+<div class="md:col-span-6 bg-primary-container p-lg rounded-xl text-white">
+<div class="flex items-center gap-base mb-md">
+<span class="material-symbols-outlined text-secondary-fixed">target</span>
+<h3 class="font-title-lg text-title-lg text-on-primary-container">Nuestra Misión</h3>
+</div>
+<p class="text-on-primary-container font-body-md text-body-md">
+                    Nuestro enfoque principal es la reducción de costos sin afectar el desempeño operativo, buscando siempre alcanzar los números óptimos de ventas para nuestros clientes.
+                </p>
+</div>
+<div class="md:col-span-6 bg-surface-container p-lg rounded-xl border border-outline-variant">
+<div class="flex items-center gap-base mb-md">
+<span class="material-symbols-outlined text-primary">visibility</span>
+<h3 class="font-title-lg text-title-lg text-primary">Nuestra Visión</h3>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md">
+                    Consolidarnos como el líder del mercado en el desarrollo y supervisión comercial a bajo costo, estableciendo el estándar de eficiencia en Centroamérica.
+                </p>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="mb-xl bg-surface-container-low p-lg rounded-xl border border-outline-variant">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-xl text-center">Nuestros Valores</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-md">
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">handshake</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-primary mb-xs">Lealtad</h4>
+<p class="text-on-surface-variant font-label-md text-label-md">Fidelidad absoluta a los objetivos de nuestros socios.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-primary mb-xs">Exclusividad y Confidencialidad</h4>
+<p class="text-on-surface-variant font-label-md text-label-md">Manejo riguroso y privado de la información estratégica.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">assignment_turned_in</span>
+</div>
+<h4 class="font-title-lg text-title-lg text-primary mb-xs">Responsabilidad</h4>
+<p class="text-on-surface-variant font-label-md text-label-md">Compromiso total con la entrega de resultados precisos.</p>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="mb-xl">
+<div class="flex flex-col md:flex-row gap-xl items-center">
+<div class="md:w-1/2">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-xs block">El Capital Humano</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Un Equipo de Élite</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-md">
+                    Contamos con una estructura robusta compuesta por <span class="font-bold text-primary">5 supervisores expertos</span> y una red de más de <span class="font-bold text-primary">70 colaboradores externos</span> altamente capacitados.
+                </p>
+<p class="text-on-surface-variant font-body-md text-body-md mb-lg">
+                    Este equipo garantiza la consistencia de la información y la ejecución impecable en cada rincón del país, desde la supervisión estratégica hasta la auditoría de campo.
+                </p>
+<button class="border border-primary text-primary px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-primary hover:text-white transition-all">
+                    Únete a nuestro equipo
+                </button>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-sm">
+<img alt="Audit Expert" class="rounded-lg border border-outline-variant w-full h-64 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1kcbT1lALGl_ZPd_xGyv6IHoIUpaZzUdzJNpQGmQl_cuqwB_hcui1RCmHvew4jWkmmkY2Jk0CTSaAlm3SXneiq8srL6CostU0-sdTjWIClaP3DRRee25i72d6xjW4HOYQMC5T2Cm3cg941Pz85XCz8w4h3nmljLm60nYPfS0bcwbQbfw6C3CcfFh5xRdYa5dE21u4Wn4PdLVgGxIBl0kMcyKaw1Bi4NLN_Ff3bEkpboeTVcwLRfzN0mhfea9xsAH7KO2qfGoftFA"/>
+<img alt="Team Collaboration" class="rounded-lg border border-outline-variant w-full h-64 object-cover mt-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYBckL-e8VxLpbrPplZwiMqORa9U1nwjgjOA8ZJ2m7gzGmus85bTpx2RObds6xp-vwpb0pJgmaLIUA8JCl_qeDdIhzfFCqQfEofBDcDUcEkLrJfF-LZRBtH38V0GbaIc7_WCqRR59uLFRStkZcrfL52fmha0_E3QrP4gexYHV-bpoG5JrdQ6omhHcSZBVQZE2CPh_rI4nnl-aOtcvKqSE3erSB-I5pGe2xij1sOWtogWFGu21L8wh6kKLT8NUDj37aHw0QSHv_tfw"/>
+</div>
+</div>
+</section>
+<!-- Map Presence Section -->
+<section class="mb-xl">
+<div class="bg-surface-container-highest rounded-xl p-lg border border-outline-variant relative overflow-hidden">
+<div class="relative z-10 max-w-md">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Cobertura 100% Nacional</h2>
+<p class="text-on-surface-variant font-body-md text-body-md mb-lg">
+                    HMS Ucomer garantiza presencia total en las <span class="font-semibold">7 provincias</span> de Costa Rica. Nuestra capacidad operativa nos permite estar donde su marca lo necesita, sin excepciones.
+                </p>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-primary text-white text-label-sm px-xs py-1 rounded">San José</span>
+<span class="bg-primary text-white text-label-sm px-xs py-1 rounded">Alajuela</span>
+<span class="bg-primary text-white text-label-sm px-xs py-1 rounded">Cartago</span>
+<span class="bg-primary text-white text-label-sm px-xs py-1 rounded">Heredia</span>
+<span class="bg-primary text-white text-label-sm px-xs py-1 rounded">Guanacaste</span>
+<span class="bg-primary text-white text-label-sm px-xs py-1 rounded">Puntarenas</span>
+<span class="bg-primary text-white text-label-sm px-xs py-1 rounded">Limón</span>
+</div>
+</div>
+<div class="absolute right-0 top-0 h-full w-full md:w-1/2 opacity-20 md:opacity-100 flex items-center justify-center p-md">
+<div class="w-full h-full bg-white rounded-lg shadow-sm overflow-hidden flex items-center justify-center">
+<div class="w-full h-full bg-surface-variant flex items-center justify-center" data-location="Costa Rica">
+<span class="material-symbols-outlined text-primary text-6xl">map</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="text-center py-xl bg-primary text-white rounded-xl mb-xl">
+<h2 class="font-display text-display mb-md">Construyamos el futuro del Retail</h2>
+<p class="font-body-lg text-body-lg mb-lg opacity-80">Aliados de Walmart, Automercado, Megasuper, Gessa y más. Estamos listos para potenciar su marca.</p>
+<button class="bg-secondary-container text-on-secondary-fixed font-title-lg text-title-lg px-xl py-md rounded-full hover:scale-105 transition-transform">
+            Contactar con un Consultor
+        </button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline full-width">
+<div class="max-w-[1120px] mx-auto px-margin-desktop py-lg flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="flex flex-col items-center gap-md">
+<div class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim">
+                HMS Ucomer
+            </div>
+<div class="flex flex-wrap justify-center gap-md font-label-md text-label-md">
+<a class="text-on-surface-variant hover:text-secondary underline transition-all" href="#">Privacidad</a>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all" href="#">Términos</a>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all" href="#">Soporte</a>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-secondary underline transition-all" href="#">Facebook</a>
+</div>
+<div class="text-on-surface-variant font-label-md text-label-md text-center">
+                © 2024 HMS Ucomer Costa Rica. Todos los derechos reservados.
+            </div>
+<div class="flex flex-col items-center gap-xs mt-base">
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Desarrollado por:</span>
+<img alt="Zamy Labs" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdeBZv-4La6B302dIEYdD9Rg8TG902mEHBieIomKxOfT7BFp6wV6b1P7FgrXaeSYTC-1CjC-3Y33c_TNJZ4G5c7AtjRc8Wa19-xCq0SwIKTO_RENws4d3jG1p5h8dbvvNe8S3GrxXq_ob6X8MCJkHmxdM4L7kDA4tROp_WNDhutihyGWZzIDykuI_wLVZYI6AT90tBp-Qj6SBHB4jGamGM8A8QODB1TRQxPW_MJMCI1Ez-e_Y1cojrS5GWfb8eGi_mZucZQ4StERA"/>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Metodología - HMS Ucomer (Contenido Real) -->
+<!DOCTYPE html>
+
+<html lang="es" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Metodología | HMS Ucomer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e1e3e4",
+                        "surface": "#f8f9fa",
+                        "outline-variant": "#c2c7c9",
+                        "on-secondary-container": "#5c6a2b",
+                        "on-tertiary-fixed": "#071e27",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#273c46",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary": "#566426",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d9dadb",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#344a54",
+                        "on-error": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "surface-variant": "#e1e3e4",
+                        "on-background": "#191c1d",
+                        "tertiary-fixed-dim": "#b3cad6",
+                        "secondary-fixed-dim": "#bdce83",
+                        "tertiary": "#102630",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#0e272d",
+                        "outline": "#72787a",
+                        "primary-container": "#253d43",
+                        "primary-fixed-dim": "#b1cbd2",
+                        "on-secondary-fixed": "#171e00",
+                        "on-tertiary-container": "#90a6b2",
+                        "primary-fixed": "#cde7ee",
+                        "on-surface-variant": "#42484a",
+                        "secondary-fixed": "#d9eb9d",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container-low": "#f3f4f5",
+                        "on-primary-container": "#8ea7ae",
+                        "tertiary-fixed": "#cfe6f2",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#051f24",
+                        "background": "#f8f9fa",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#d9eb9d",
+                        "on-surface": "#191c1d",
+                        "inverse-primary": "#b1cbd2",
+                        "on-primary-fixed-variant": "#324a51",
+                        "on-secondary-fixed-variant": "#3e4c0f",
+                        "surface-tint": "#4a6269",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "title-lg": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "display": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                        "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(14, 39, 45, 0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim full-width top-0 sticky z-50 border-b border-outline-variant dark:border-outline">
+<div class="max-w-[1120px] mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="text-title-lg font-title-lg font-bold text-primary dark:text-primary-fixed-dim cursor-pointer transition-all duration-200 active:opacity-80">
+                HMS Ucomer
+            </div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer" href="#">Servicios</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer" href="#">Software</a>
+<a class="font-body-lg text-body-lg text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer" href="#">Metodología</a>
+<a class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 cursor-pointer" href="#">Empresa</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-md py-base font-label-md text-label-md rounded-lg cursor-pointer transition-all duration-200 active:opacity-80 hover:bg-primary hover:text-on-primary">
+                Contactar
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface py-xl">
+<div class="max-w-[1120px] mx-auto px-margin-desktop relative z-10">
+<div class="max-w-2xl">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-wider mb-sm block">Nuestra Excelencia Operativa</span>
+<h1 class="font-display text-display text-primary mb-md leading-tight">
+                        Nuestro Proceso de Trabajo: <br/>
+<span class="text-secondary">Precisión en cada Visita</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">
+                        Garantizamos la integridad de sus datos mediante una metodología rigurosa de cuatro fases, diseñada para transformar la observación de campo en decisiones estratégicas de alta rentabilidad.
+                    </p>
+</div>
+</div>
+<div class="absolute right-0 top-0 w-1/3 h-full bg-surface-container-low opacity-40 md:block hidden">
+<div class="w-full h-full bg-pattern"></div>
+</div>
+</section>
+<!-- The 4-Step Process (Bento Grid Style) -->
+<section class="py-xl bg-background">
+<div class="max-w-[1120px] mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md items-stretch">
+<!-- Step 1 -->
+<div class="md:col-span-7 bg-surface-container-lowest border border-outline-variant p-lg flex flex-col justify-between group hover:shadow-lg transition-all duration-300">
+<div>
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center text-on-primary-container mb-md">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Paso 1: Planificación Semanal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Realizamos una planificación de rutas semanal cada lunes, definiendo los puntos críticos y objetivos de auditoría para asegurar una cobertura estratégica total.</p>
+</div>
+<div class="mt-md border-t border-outline-variant pt-sm flex justify-between items-center">
+<span class="text-label-sm font-label-sm text-secondary">TODOS LOS LUNES</span>
+<span class="text-display opacity-5 font-black">01</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="md:col-span-5 bg-primary text-on-primary p-lg flex flex-col justify-between group hover:bg-primary-container transition-all duration-300">
+<div>
+<div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center text-on-secondary mb-md">
+<span class="material-symbols-outlined" data-icon="store">store</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-sm">Paso 2: Ejecución y Tareas</h3>
+<p class="font-body-md text-body-md text-on-primary-container">Al llegar al punto de venta, nuestros auditores ejecutan tareas específicas, gestionando con agilidad los momentos de alto tráfico para garantizar datos precisos sin interrupciones.</p>
+</div>
+<div class="mt-md text-right">
+<span class="text-display opacity-10 font-black">02</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="md:col-span-5 bg-surface-container-high border border-outline-variant p-lg flex flex-col justify-between group hover:bg-surface-container-highest transition-all duration-300">
+<div>
+<div class="w-12 h-12 bg-tertiary-container rounded-lg flex items-center justify-center text-on-tertiary-container mb-md">
+<span class="material-symbols-outlined" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Paso 3: Procesamiento Inmediato</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Carga instantánea de la información a nuestra plataforma centralizada. Los datos se procesan en tiempo real para un análisis profundo y validación técnica inmediata.</p>
+</div>
+<div class="mt-md text-right">
+<span class="text-display opacity-5 font-black">03</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="md:col-span-7 bg-surface-container-lowest border border-outline-variant p-lg flex flex-col justify-between group hover:shadow-lg transition-all duration-300">
+<div>
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center text-on-secondary-container mb-md">
+<span class="material-symbols-outlined" data-icon="summarize">summarize</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Paso 4: Entrega de Reportes Diarios</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Cada mañana, usted recibe informes consolidados con los hallazgos del día anterior, permitiendo una toma de decisiones informada y ágil sobre su ejecución comercial.</p>
+</div>
+<div class="mt-md border-t border-outline-variant pt-sm flex justify-between items-center">
+<span class="text-label-sm font-label-sm text-secondary">REPORTES MATUTINOS</span>
+<span class="text-display opacity-5 font-black">04</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Continuous Improvement Visual -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-[1120px] mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-xl">Ciclo de Mejora Continua en 24 Horas</h2>
+<div class="relative flex justify-center items-center py-lg">
+<!-- Circular Diagram Representation -->
+<div class="relative w-full max-w-2xl aspect-square flex items-center justify-center">
+<!-- Background Circle -->
+<div class="absolute inset-0 border-[24px] border-surface-container-high rounded-full opacity-50"></div>
+<!-- Inner content -->
+<div class="relative z-10 w-64 h-64 bg-white border border-outline-variant rounded-full flex flex-col items-center justify-center p-md shadow-sm">
+<span class="material-symbols-outlined text-primary text-4xl mb-sm" data-icon="speed">speed</span>
+<span class="font-title-lg text-title-lg text-primary">HMS Ucomer</span>
+<span class="font-label-md text-label-md text-secondary">RESPUESTA &lt; 24H</span>
+</div>
+<!-- Orbiting Nodes -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-sm border border-outline-variant flex items-center gap-sm rounded-lg shadow-md hover:-translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="report_problem">report_problem</span>
+<span class="font-label-md text-label-md">Detección de Anomalías</span>
+</div>
+<div class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 bg-white p-sm border border-outline-variant flex items-center gap-sm rounded-lg shadow-md hover:translate-x-2 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span class="font-label-md text-label-md">Resolución de Incidentes</span>
+</div>
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white p-sm border border-outline-variant flex items-center gap-sm rounded-lg shadow-md hover:translate-y-2 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="monitoring">monitoring</span>
+<span class="font-label-md text-label-md">Ajuste de Ruta</span>
+</div>
+<div class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-sm border border-outline-variant flex items-center gap-sm rounded-lg shadow-md hover:-translate-x-2 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="sync_alt">sync_alt</span>
+<span class="font-label-md text-label-md">Validación de Datos</span>
+</div>
+</div>
+</div>
+<div class="mt-xl max-w-3xl mx-auto">
+<p class="font-body-lg text-body-lg text-on-surface-variant italic">
+                        "Identificamos cualquier anomalía en el campo y trabajamos para resolverla en menos de 24 horas, garantizando que el ciclo de información nunca se detenga."
+                    </p>
+</div>
+</div>
+</section>
+<!-- Ethics & Truth Section -->
+<section class="py-xl bg-primary text-on-primary">
+<div class="max-w-[1120px] mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
+<img alt="Ética profesional" class="w-full h-full object-cover" data-alt="A high-contrast, professional close-up of a person's hands signing a document with a premium fountain pen. The lighting is focused and dramatic, highlighting the texture of high-quality paper. The background is a sophisticated, dark-toned corporate office with clean lines and subtle teal accents. The atmosphere conveys deep trust, professional rigor, and absolute legal compliance in a light-mode modern executive setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw9Dnzal9ZiR5tbTF0wGim3jw895vFMIE7uuOkKruo7_dzX6EvWUO0F1pRsdq9qHUMLeulvJn28bCAaLcWfzEdhBLw6kKQGMkJ-IFbMCRevHbmyD7Crt3qMbejYDlFyRSRf9sM9kRq2Yd64Hal9gI7Txkug-0ehFCz2kpakj2ykGka7GrVbFNLgkDYmHPuAo4purvht5_MZRTmazDZuLc0yh2lbE8F6JEwdlWLW9f9p6rTeXL37GJfQOe8Ofxeo_vwgeTCcahMQoQ"/>
+<div class="absolute inset-0 bg-primary mix-blend-multiply opacity-20"></div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-md">Garantía de Veracidad Tecnológica</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-md">
+                        En HMS Ucomer, la veracidad de los datos está respaldada por tecnología de punta. Nuestra aplicación de auditoría integra protocolos de seguridad infranqueables:
+                    </p>
+<div class="space-y-sm">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<span class="font-body-md text-body-md">Geolocalización GPS obligatoria para cada registro de visita.</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="photo_camera">photo_camera</span>
+<span class="font-body-md text-body-md">Evidencia fotográfica en tiempo real in-situ.</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="history">history</span>
+<span class="font-body-md text-body-md">Estampado de tiempo (Time-stamping) digital e inalterable.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-xl bg-surface-container">
+<div class="max-w-[1120px] mx-auto px-margin-desktop text-center">
+<div class="bg-surface-container-lowest p-xl border border-outline-variant rounded-xl shadow-sm">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">¿Listo para elevar la precisión de su ejecución?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-xl mx-auto">
+                        Permítanos presentarle cómo nuestra metodología puede adaptarse específicamente a los retos de su categoría.
+                    </p>
+<button class="bg-primary text-on-primary px-lg py-md font-label-md text-label-md rounded-lg hover:bg-primary-container transition-all shadow-md active:scale-95 inline-flex items-center gap-sm">
+                        Hablemos de su metodología
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline">
+<div class="max-w-[1120px] mx-auto px-margin-desktop py-lg flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="flex flex-col items-center gap-lg w-full">
+<div class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim text-center">HMS Ucomer</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">Privacidad</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">Términos</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">Soporte</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">LinkedIn</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">Facebook</a>
+</div>
+<div class="flex flex-col items-center gap-sm">
+<div class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant text-center">© 2024 HMS Ucomer Costa Rica. Todos los derechos reservados.</div>
+<div class="flex flex-col items-center mt-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant opacity-70 mb-1">Desarrollado por:</span>
+<img alt="Zamy Labs Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdeBZv-4La6B302dIEYdD9Rg8TG902mEHBieIomKxOfT7BFp6wV6b1P7FgrXaeSYTC-1CjC-3Y33c_TNJZ4G5c7AtjRc8Wa19-xCq0SwIKTO_RENws4d3jG1p5h8dbvvNe8S3GrxXq_ob6X8MCJkHmxdM4L7kDA4tROp_WNDhutihyGWZzIDykuI_wLVZYI6AT90tBp-Qj6SBHB4jGamGM8A8QODB1TRQxPW_MJMCI1Ez-e_Y1cojrS5GWfb8eGi_mZucZQ4StERA"/>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for diagram
+        const diagramNodes = document.querySelectorAll('.hover\\:scale-105, .hover\\:-translate-y-2, .hover\\:translate-x-2, .hover\\:translate-y-2, .hover\\:-translate-x-2');
+        diagramNodes.forEach(node => {
+            node.addEventListener('mouseenter', () => {
+                node.style.zIndex = '50';
+            });
+            node.addEventListener('mouseleave', () => {
+                node.style.zIndex = 'auto';
+            });
+        });
+    </script>
+</body></html>
+
+<!-- Servicios - HMS Ucomer (Contenido Real) -->
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Servicios | HMS Ucomer - Soluciones Estratégicas para Retail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e1e3e4",
+                    "surface": "#f8f9fa",
+                    "outline-variant": "#c2c7c9",
+                    "on-secondary-container": "#5c6a2b",
+                    "on-tertiary-fixed": "#071e27",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#273c46",
+                    "surface-container-high": "#e7e8e9",
+                    "secondary": "#566426",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#d9dadb",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#344a54",
+                    "on-error": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "surface-variant": "#e1e3e4",
+                    "on-background": "#191c1d",
+                    "tertiary-fixed-dim": "#b3cad6",
+                    "secondary-fixed-dim": "#bdce83",
+                    "tertiary": "#102630",
+                    "surface-bright": "#f8f9fa",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#0e272d",
+                    "outline": "#72787a",
+                    "primary-container": "#253d43",
+                    "primary-fixed-dim": "#b1cbd2",
+                    "on-secondary-fixed": "#171e00",
+                    "on-tertiary-container": "#90a6b2",
+                    "primary-fixed": "#cde7ee",
+                    "on-surface-variant": "#42484a",
+                    "secondary-fixed": "#d9eb9d",
+                    "inverse-surface": "#2e3132",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-container-low": "#f3f4f5",
+                    "on-primary-container": "#8ea7ae",
+                    "tertiary-fixed": "#cfe6f2",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#051f24",
+                    "background": "#f8f9fa",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#d9eb9d",
+                    "on-surface": "#191c1d",
+                    "inverse-primary": "#b1cbd2",
+                    "on-primary-fixed-variant": "#324a51",
+                    "on-secondary-fixed-variant": "#3e4c0f",
+                    "surface-tint": "#4a6269",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xl": "80px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Montserrat"],
+                    "label-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "title-lg": ["Montserrat"],
+                    "label-sm": ["Montserrat"],
+                    "display": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "headline-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-lg">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim full-width top-0 sticky z-50 border-b border-outline-variant dark:border-outline flat no shadows">
+<div class="max-w-[1120px] mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="text-title-lg font-title-lg font-bold text-primary dark:text-primary-fixed-dim">HMS Ucomer</div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="cursor-pointer transition-all duration-200 active:opacity-80 text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1 font-body-lg text-body-lg" href="#">Servicios</a>
+<a class="cursor-pointer transition-all duration-200 active:opacity-80 text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-lg text-body-lg" href="#">Software</a>
+<a class="cursor-pointer transition-all duration-200 active:opacity-80 text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-lg text-body-lg" href="#">Metodología</a>
+<a class="cursor-pointer transition-all duration-200 active:opacity-80 text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-body-lg text-body-lg" href="#">Empresa</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-md py-xs rounded-lg font-label-md text-label-md hover:bg-primary transition-colors">
+                Contactar
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-[0.4]" data-alt="Modern supermarket aisle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKQSN_gf3bF8dgFxXnwGHLX-D7aux4v17Xd1RSZu8mBHUg9aGDvQuQMKVTtbJiF6fcA9GkVMgbqniwbPc4M2pjBmhGtpdSqUhYRm0dyvd25Z4GsrAvz8yTYPuw0h_JRCh29Wfp3jmDAZpPo2mKa15XrdQblwvRHvxdN5JwlIl1Kp9KeOeWB1C7xheDwjDmiTqxuKDJ5ExlC866BRenziKWSdVhSmXRv0eLEwyHBKpWO0zbaUnGFNCGiq7UA2MWuIZBzH2jRZWQ5Rw"/>
+</div>
+<div class="max-w-[1120px] mx-auto px-margin-desktop relative z-10 w-full">
+<div class="max-w-2xl">
+<span class="text-secondary font-label-md text-label-md tracking-widest uppercase mb-base block">Ejecución Impecable</span>
+<h1 class="text-display font-display text-white mb-md leading-tight">No solo auditamos, ejecutamos resultados</h1>
+<p class="text-white/80 font-body-lg text-body-lg mb-lg max-w-lg">
+                        Potenciamos su marca en el retail mediante servicios integrales de desarrollo comercial, registro y colocación con cobertura nacional.
+                    </p>
+<div class="flex gap-md">
+<a class="bg-secondary text-on-secondary px-lg py-sm rounded-lg font-title-lg text-title-lg hover:bg-secondary-fixed transition-colors inline-block" href="#servicios">
+                            Ver Soluciones
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Services Section -->
+<section class="py-xl bg-surface-container-lowest" id="servicios">
+<div class="max-w-[1120px] mx-auto px-margin-desktop">
+<div class="text-center mb-xl">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-sm">Nuestros Servicios Core</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl mx-auto">Soluciones estratégicas diseñadas para dominar el punto de venta.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="bg-surface p-lg border border-outline-variant hover:border-primary transition-all duration-300 flex flex-col h-full">
+<div class="w-16 h-16 bg-primary-container/10 flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="trending_up">trending_up</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-md">Desarrollo Comercial en Punto de Venta</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-lg flex-grow">
+                            Enfoque en estrategia de ventas, posicionamiento y soporte ejecutivo para maximizar su presencia.
+                        </p>
+<div class="space-y-sm">
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="check_circle">check_circle</span>
+<span class="text-body-md font-medium">Dashboards y reportes diarios</span>
+</div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="check_circle">check_circle</span>
+<span class="text-body-md font-medium">Resolución inmediata de problemas</span>
+</div>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface p-lg border border-outline-variant hover:border-primary transition-all duration-300 flex flex-col h-full">
+<div class="w-16 h-16 bg-primary-container/10 flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="assignment">assignment</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-md">Registro de Productos</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-lg flex-grow">
+                            Gestión integral 100% (fotos, formularios, muestras) con más de 10 años de experiencia.
+                        </p>
+<div class="space-y-sm">
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="check_circle">check_circle</span>
+<span class="text-body-md font-medium">Relación directa con compradores</span>
+</div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="check_circle">check_circle</span>
+<span class="text-body-md font-medium">Gestión documental completa</span>
+</div>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface p-lg border border-outline-variant hover:border-primary transition-all duration-300 flex flex-col h-full">
+<div class="w-16 h-16 bg-primary-container/10 flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="local_shipping">local_shipping</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-md">Servicio de Colocación de Productos</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-lg flex-grow">
+                            Fuerza operativa de +70 colaboradores con cobertura en todo el territorio nacional.
+                        </p>
+<div class="space-y-sm">
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="check_circle">check_circle</span>
+<span class="text-body-md font-medium">Visibilidad en tiempo real</span>
+</div>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="check_circle">check_circle</span>
+<span class="text-body-md font-medium">Infraestructura a nivel país</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Differentiator Section -->
+<section class="py-xl bg-surface">
+<div class="max-w-[1120px] mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-center">
+<div class="lg:col-span-5">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-wider mb-sm block">Nuestro Diferencial</span>
+<h2 class="text-headline-lg font-headline-lg text-primary mb-md">Ejecución que transforma el lineal</h2>
+<div class="space-y-md">
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="bolt">bolt</span>
+<div>
+<h4 class="text-title-lg font-title-lg text-primary">Acción Inmediata</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">No solo reportamos el quiebre de stock, accionamos la reposición y negociamos el espacio en el momento.</p>
+</div>
+</div>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="groups">groups</span>
+<div>
+<h4 class="text-title-lg font-title-lg text-primary">Equipo Experto</h4>
+<p class="text-on-surface-variant font-body-md text-body-md">Más de 70 profesionales especializados en la dinámica del retail costarricense.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 relative">
+<div class="aspect-video bg-surface-container-high rounded-xl overflow-hidden shadow-xl border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Professional working in retail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgL0eq7rAXlj-aRSFI4ipStdQXhJjMcNmq9t7rRUBBe_Lkg-5P1rHsIRzye-zfYoV6VfuIseZC8xJGZhaudOEQXAEc6ADVwSkkLKmsbbnbrk5lycb2YQJ_jRFVM_uDJxKEkspI0oVdFIYrsZ30ES5XGnxhKNadJBTe5cnsBBy-UEVwjXWafRJYqNZFlQ-8Jm4njmtMBgWTRwmdUyXaa95XGZ2dBHsNorPO5JvUSlMjQp6mZIS4IwveDo077MSnpI06TK9Pzi7anBc"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl">
+<div class="max-w-[1120px] mx-auto px-margin-desktop">
+<div class="bg-primary-container p-lg rounded-none flex flex-col md:flex-row items-center justify-between gap-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="relative z-10 max-w-xl text-center md:text-left">
+<h2 class="text-headline-lg font-headline-lg text-white mb-sm">¿Listo para llevar sus ventas al siguiente nivel?</h2>
+<p class="text-on-primary-container font-body-lg text-body-lg">Agende una consultoría estratégica hoy mismo y descubra cómo podemos optimizar su presencia nacional.</p>
+</div>
+<div class="relative z-10">
+<button class="bg-secondary text-on-secondary px-xl py-md font-headline-md text-headline-md hover:bg-secondary-fixed transition-all hover:scale-105 active:scale-95 shadow-lg">
+                            Agendar Consultoría
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline">
+<div class="max-w-[1120px] mx-auto px-margin-desktop py-lg">
+<div class="flex flex-col items-center gap-lg w-full">
+<div class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim text-center">HMS Ucomer</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md w-full max-w-2xl text-center mb-md">
+<div class="flex flex-col gap-xs">
+<p class="font-bold text-primary">Contáctenos</p>
+<p class="text-on-surface-variant text-body-md">ventas@hmsucomer.cr</p>
+<p class="text-on-surface-variant text-body-md">+506 4000-0000</p>
+</div>
+<div class="flex flex-col gap-xs">
+<p class="font-bold text-primary">Ubicación</p>
+<p class="text-on-surface-variant text-body-md">San José, Costa Rica</p>
+<p class="text-on-surface-variant text-body-md">Cobertura Nacional</p>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-md font-label-md text-label-md">
+<a class="text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">Privacidad</a>
+<a class="text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">Términos</a>
+<a class="text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">Soporte</a>
+<a class="text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">LinkedIn</a>
+</div>
+<div class="flex flex-col items-center gap-sm mt-md">
+<p class="text-on-surface-variant font-label-md text-label-md text-center">© 2024 HMS Ucomer Costa Rica. Todos los derechos reservados.</p>
+<div class="flex flex-col items-center gap-xs">
+<span class="text-on-surface-variant font-label-md text-label-md">Desarrollado por:</span>
+<img alt="Zamy Labs" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdeBZv-4La6B302dIEYdD9Rg8TG902mEHBieIomKxOfT7BFp6wV6b1P7FgrXaeSYTC-1CjC-3Y33c_TNJZ4G5c7AtjRc8Wa19-xCq0SwIKTO_RENws4d3jG1p5h8dbvvNe8S3GrxXq_ob6X8MCJkHmxdM4L7kDA4tROp_WNDhutihyGWZzIDykuI_wLVZYI6AT90tBp-Qj6SBHB4jGamGM8A8QODB1TRQxPW_MJMCI1Ez-e_Y1cojrS5GWfb8eGi_mZucZQ4StERA"/>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Sticky header opacity change
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>
+
+<!-- HMS Ucomer - Inicio (Contenido Real) -->
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HMS Ucomer | Ejecución y Auditoría Retail Profesional en Costa Rica</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#d9eb9d",
+                        "on-tertiary-fixed": "#071e27",
+                        "surface": "#f8f9fa",
+                        "on-primary-fixed-variant": "#324a51",
+                        "secondary-container": "#d9eb9d",
+                        "tertiary-fixed-dim": "#b3cad6",
+                        "outline-variant": "#c2c7c9",
+                        "primary-fixed": "#cde7ee",
+                        "on-tertiary-fixed-variant": "#344a54",
+                        "inverse-primary": "#b1cbd2",
+                        "inverse-surface": "#2e3132",
+                        "on-surface": "#191c1d",
+                        "surface-tint": "#4a6269",
+                        "primary-container": "#253d43",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#051f24",
+                        "outline": "#72787a",
+                        "on-tertiary-container": "#90a6b2",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#42484a",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#3e4c0f",
+                        "tertiary-fixed": "#cfe6f2",
+                        "tertiary-container": "#273c46",
+                        "surface-dim": "#d9dadb",
+                        "tertiary": "#102630",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container": "#edeeef",
+                        "secondary-fixed-dim": "#bdce83",
+                        "on-secondary-fixed": "#171e00",
+                        "primary": "#0e272d",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#5c6a2b",
+                        "on-background": "#191c1d",
+                        "surface-container-low": "#f3f4f5",
+                        "error": "#ba1a1a",
+                        "background": "#f8f9fa",
+                        "secondary": "#566426",
+                        "on-primary-container": "#8ea7ae",
+                        "surface-variant": "#e1e3e4",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#b1cbd2",
+                        "surface-bright": "#f8f9fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "xl": "80px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "section-padding": "80px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display": ["Montserrat"],
+                        "headline": ["Montserrat"],
+                        "title": ["Montserrat"],
+                        "body": ["Montserrat"],
+                        "label": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body">
+<!-- Header -->
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<img alt="HMS Ucomer Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN2PJtniPN2fKDitMFOo58LtX2kj9lh3TwN0ilGFmtYwEaGl9rO03IF6pkUmrPbl21J8LaPTX6kQUKN-OUuAX7SJWRin-4MCpVbaAg2nzZ7t5u_BTSUys2ZWGhnEcpLzqnKfMYlBoWs4fAYZghCGzgidZbEuUoQ1dXj7kX1L8nksRurKK2XDAHghRysV3yWHpSriLYnhZ03CJG2g21i3keWOZut1-7vJzZ8GE0rtA1HmqGfhMPnhLZ6W3i5UtxeHW8vXwe0JLmlzo"/>
+<span class="text-title-lg font-bold text-primary">HMS Ucomer</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#servicios">Servicios</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#sistema">Tecnología</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200" href="#nosotros">Trayectoria</a>
+<a class="bg-primary text-on-primary px-6 py-2 rounded font-bold text-label-caps hover:bg-primary-container transition-all" href="#contacto">Contáctenos</a>
+</nav>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center overflow-hidden py-section-padding">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid md:grid-cols-2 gap-12 items-center">
+<div class="z-10 reveal active">
+<h1 class="text-display-lg-mobile md:text-display-lg font-bold text-primary mb-6">
+                        Más que una auditoría: Ejecutamos y resolvemos en tiempo real para impulsar sus ventas
+                    </h1>
+<p class="text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                        En HMS Ucomer no solo reportamos datos; tomamos acción inmediata en el punto de venta para asegurar que su marca domine el mercado costarricense.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-md" href="#contacto">
+                            Solicitar Consultoría
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-bold text-lg text-center hover:bg-primary hover:text-white transition-all" href="#servicios">
+                            Nuestros Servicios
+                        </a>
+</div>
+</div>
+<div class="relative reveal delay-200 active">
+<div class="rounded-xl overflow-hidden border border-outline-variant shadow-lg">
+<img alt="Retail audit in supermarket" class="w-full h-full object-cover aspect-[4/3]" src="https://lh3.googleusercontent.com/aida/ADBb0ug3Ude6oGboRNNrj4ob0a_XkBeG20WAD2zTCw59lSvQYfdlWilTinXCgpq0OUoxc-qkofi0DTkme_EqAbVR39ZJQbmlDaShOpJcJvuLciVUaUX-rGuRlMzOQwcxQnyuvGvSQByDXhithFqef0uKmyJmj3P34IgNIfr462KueYVua4b0jIuW90RlWRC9ZcdNExVTssx6yBIPi8OxC4tEWe6hCsD8M5wnw2vV5jHenHK7-Z8Dde6ioX2uCQ"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-xl hidden lg:block">
+<div class="flex items-center gap-4">
+<div class="bg-secondary-container p-3 rounded-full">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="trending_up">trending_up</span>
+</div>
+<div>
+<p class="text-label-caps text-on-surface-variant uppercase">ENFOQUE EN RESULTADOS</p>
+<p class="text-title-lg font-bold text-primary">Crecimiento en Ventas</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section (Who We Are) -->
+<section class="bg-surface-container-low py-section-padding" id="nosotros">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="reveal active">
+<span class="text-secondary font-bold text-label-caps tracking-widest mb-4 block uppercase">CONFIANZA Y PRECISIÓN</span>
+<h2 class="text-headline-md font-bold text-primary mb-6">Nuestra Trayectoria en Números</h2>
+<p class="text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                            HMS Ucomer se ha consolidado como el socio estratégico de las marcas líderes en el mercado retail. Nuestra precisión operativa y lealtad con los clientes respaldan cada decisión de negocio.
+                        </p>
+<div class="grid sm:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-6 border-l-4 border-secondary shadow-sm">
+<p class="text-display-lg-mobile font-bold text-primary mb-1">4</p>
+<p class="text-body-md text-on-surface-variant">Clientes Clave (9+ años)</p>
+</div>
+<div class="bg-surface-container-lowest p-6 border-l-4 border-secondary shadow-sm">
+<p class="text-display-lg-mobile font-bold text-primary mb-1">+2500</p>
+<p class="text-body-md text-on-surface-variant">Visitas Mensuales</p>
+</div>
+<div class="bg-surface-container-lowest p-6 border-l-4 border-secondary shadow-sm">
+<p class="text-display-lg-mobile font-bold text-primary mb-1">+95%</p>
+<p class="text-body-md text-on-surface-variant">Precisión en Datos</p>
+</div>
+</div>
+</div>
+<div class="relative reveal delay-200 active">
+<img alt="Auditor working in store" class="rounded-xl shadow-lg w-full h-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ui9yF2Ji75Yi43KA339IrqBmgQ5oNJisKoDMNojCgSjskOO5ni6979bruL97abQd1zkanpRQonIBinxR5PlTXfatiS2Z2Ly4EXjoAG_ZGqYOONfbKAbs7FBnnoUvpoQXTCFQscUE5wtQ2iYoC2oE0rrKzyOoEtxfrCycsy0OSbqKd2W9a6Cxs7N4nzei2Ge9URTcGtOgdhSIGl7P-icvp007oO_uXb6_2Sdk9pCSe8TA6WOTyAP4hM4Mg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-padding bg-surface" id="servicios">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16">
+<h2 class="text-headline-md font-bold text-primary mb-4 reveal active">Nuestras Soluciones Especializadas</h2>
+<div class="w-16 h-1 bg-secondary mx-auto reveal active"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant rounded-lg hover:border-secondary transition-all group reveal active">
+<div class="w-14 h-14 bg-surface-container rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="storefront">storefront</span>
+</div>
+<h3 class="text-title-lg font-bold text-primary mb-4">Desarrollo comercial en punto de venta</h3>
+<p class="text-body-md text-on-surface-variant">
+                        Optimización de la presencia de marca mediante estrategias de visibilidad, cumplimiento de acuerdos comerciales y gestión activa en anaquel.
+                    </p>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant rounded-lg hover:border-secondary transition-all group reveal active">
+<div class="w-14 h-14 bg-surface-container rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="app_registration">app_registration</span>
+</div>
+<h3 class="text-title-lg font-bold text-primary mb-4">Registro de productos</h3>
+<p class="text-body-md text-on-surface-variant">
+                        Gestión profesional para el registro y actualización de productos ante las autoridades correspondientes y cadenas comerciales, asegurando el cumplimiento legal.
+                    </p>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant rounded-lg hover:border-secondary transition-all group reveal active">
+<div class="w-14 h-14 bg-surface-container rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="inventory">inventory</span>
+</div>
+<h3 class="text-title-lg font-bold text-primary mb-4">Servicio de Colocación de productos</h3>
+<p class="text-body-md text-on-surface-variant">
+                        Ejecución física de colocación, rotación de inventarios y mantenimiento de exhibiciones para garantizar que el producto esté siempre disponible y atractivo.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Digital Product Section (Technology System) -->
+<section class="bg-primary-container py-section-padding text-white overflow-hidden" id="sistema">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="reveal active">
+<h2 class="text-headline-md md:text-display-lg font-bold mb-6">Información Crítica en Tiempo Real</h2>
+<p class="text-body-lg text-on-primary-container mb-10 leading-relaxed">
+                            Nuestra plataforma tecnológica exclusiva permite una visibilidad total sobre la ejecución en punto de venta. Transformamos cada visita en un conjunto de datos estructurados accesibles desde cualquier dispositivo.
+                        </p>
+<div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="smartphone">smartphone</span>
+<div>
+<h4 class="font-bold mb-1">Captura Digital</h4>
+<p class="text-body-md text-on-primary-container">Levantamiento directo en tienda.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="query_stats">query_stats</span>
+<div>
+<h4 class="font-bold mb-1">Reportes Real-Time</h4>
+<p class="text-body-md text-on-primary-container">KPIs actualizados al instante.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="hub">hub</span>
+<div>
+<h4 class="font-bold mb-1">Multi-Canal</h4>
+<p class="text-body-md text-on-primary-container">Control centralizado nacional.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="photo_camera">photo_camera</span>
+<div>
+<h4 class="font-bold mb-1">Respaldo Fotográfico</h4>
+<p class="text-body-md text-on-primary-container">Evidencia visual de ejecución.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative reveal delay-200 active">
+<div class="bg-primary p-4 rounded-xl shadow-2xl border border-white/10">
+<img alt="Retail software dashboard" class="rounded-lg w-full h-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ui4VRk3hRUz8mofblxYx_6_hRffqp_ERajM-GpO2hd083gz8xJ1-pBIfQC01PHmrSHHtWGAJRQiYmNvxgKsmVzlQ3bY_Ww7_GGtsujn8rmorYF_ID5dJ6V43sc4BCHq0XaWtH4fdA1gjabOLeuvRscpvNTwUV5sR6cnPOzwWeO-AeAJYHpk1fJr3fQJMflmgGJPYOTce9wpT_rY4aqL3FpGDeEaTnJuiO-ie7n8qoUKMSAuTacOqvlA2g"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-padding bg-surface" id="contacto">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid lg:grid-cols-3 gap-12">
+<div class="lg:col-span-1 reveal active">
+<h2 class="text-headline-md font-bold text-primary mb-6">Potencie su presencia comercial</h2>
+<p class="text-body-lg text-on-surface-variant mb-10">
+                            Estamos listos para elevar el estándar de su marca en el mercado retail costarricense con soluciones enfocadas en retorno de inversión.
+                        </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-surface-container p-3 rounded-full text-primary">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div>
+<p class="text-label-caps font-bold uppercase">EMAIL</p>
+<p class="text-body-lg">jyghernandez@outlook.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container p-3 rounded-full text-primary">
+<span class="material-symbols-outlined" data-icon="phone">phone</span>
+</div>
+<div>
+<p class="text-label-caps font-bold uppercase">TELÉFONOS</p>
+<p class="text-body-lg">+506 6102 5937<br/>+506 6110 4306</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container p-3 rounded-full text-primary">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="text-label-caps font-bold uppercase">UBICACIÓN</p>
+<p class="text-body-lg">San José, Costa Rica</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 reveal delay-200 active">
+<form class="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-sm border border-outline-variant grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-body-md font-bold text-primary">Nombre Completo</label>
+<input class="w-full px-4 py-3 rounded border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" placeholder="Su nombre" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-body-md font-bold text-primary">Empresa</label>
+<input class="w-full px-4 py-3 rounded border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" placeholder="Nombre de su organización" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-body-md font-bold text-primary">Cargo / Rol</label>
+<input class="w-full px-4 py-3 rounded border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" placeholder="Ej. Gerente Comercial" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-body-md font-bold text-primary">Teléfono</label>
+<input class="w-full px-4 py-3 rounded border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" placeholder="+506" type="tel"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-body-md font-bold text-primary">Servicio de Interés</label>
+<select class="w-full px-4 py-3 rounded border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all">
+<option>Desarrollo comercial en punto de venta</option>
+<option>Registro de productos</option>
+<option>Servicio de Colocación de productos</option>
+<option>Otro</option>
+</select>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-body-md font-bold text-primary">Mensaje</label>
+<textarea class="w-full px-4 py-3 rounded border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all" placeholder="¿Cómo podemos ayudarle a potenciar sus ventas?" rows="4"></textarea>
+</div>
+<div class="md:col-span-2">
+<button class="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-primary-container transition-all flex items-center justify-center gap-2" type="submit">
+                                    Enviar Mensaje
+                                    <span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white"><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col items-center gap-10">
+<div class="flex flex-col items-center gap-4">
+<div class="flex items-center gap-3">
+<img alt="HMS Ucomer Logo Small" class="h-10 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN2PJtniPN2fKDitMFOo58LtX2kj9lh3TwN0ilGFmtYwEaGl9rO03IF6pkUmrPbl21J8LaPTX6kQUKN-OUuAX7SJWRin-4MCpVbaAg2nzZ7t5u_BTSUys2ZWGhnEcpLzqnKfMYlBoWs4fAYZghCGzgidZbEuUoQ1dXj7kX1L8nksRurKK2XDAHghRysV3yWHpSriLYnhZ03CJG2g21i3keWOZut1-7vJzZ8GE0rtA1HmqGfhMPnhLZ6W3i5UtxeHW8vXwe0JLmlzo"/>
+<span class="text-headline-md font-bold">HMsucomer</span>
+</div>
+<p class="text-body-md text-on-primary-container text-center max-w-lg">
+            © 2024 HMS Ucomer. Todos los derechos reservados. Expertos en Auditoría y Ejecución Retail para el mercado de Costa Rica.
+        </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-label-caps font-bold hover:text-secondary-fixed transition-colors uppercase" href="#">Privacidad</a>
+<a class="text-label-caps font-bold hover:text-secondary-fixed transition-colors uppercase" href="#">Términos</a>
+<a class="text-label-caps font-bold hover:text-secondary-fixed transition-colors uppercase" href="#">Soporte</a>
+<a class="text-label-caps font-bold hover:text-secondary-fixed transition-colors uppercase" href="#">LinkedIn</a>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="text-body-md text-on-primary-container uppercase tracking-wider font-medium">Desarrollado por:</span>
+<a class="transition-transform hover:scale-105 active:scale-95" href="#">
+<img alt="Zamy Labs Logo" class="h-16 md:h-20 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdeBZv-4La6B302dIEYdD9Rg8TG902mEHBieIomKxOfT7BFp6wV6b1P7FgrXaeSYTC-1CjC-3Y33c_TNJZ4G5c7AtjRc8Wa19-xCq0SwIKTO_RENws4d3jG1p5h8dbvvNe8S3GrxXq_ob6X8MCJkHmxdM4L7kDA4tROp_WNDhutihyGWZzIDykuI_wLVZYI6AT90tBp-Qj6SBHB4jGamGM8A8QODB1TRQxPW_MJMCI1Ez-e_Y1cojrS5GWfb8eGi_mZucZQ4StERA"/>
+</a>
+</div>
+</div></footer>
+<script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body></html>

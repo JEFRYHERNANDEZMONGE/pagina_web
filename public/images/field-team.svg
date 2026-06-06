@@ -1,0 +1,33 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Retail field team reviewing store execution</title>
+  <desc id="desc">Two field professionals review a structured route plan beside supermarket shelves.</desc>
+  <rect width="960" height="720" fill="#edf4f2"/>
+  <rect x="96" y="96" width="768" height="504" rx="30" fill="#fbfdfb" stroke="#bdd2ce" stroke-width="3"/>
+  <rect x="132" y="146" width="304" height="380" rx="22" fill="#101d2d"/>
+  <path d="M164 454c64-104 126-154 236-246v318H164z" fill="#17344a"/>
+  <g fill="#008c68">
+    <circle cx="214" cy="222" r="34"/>
+    <circle cx="346" cy="274" r="28"/>
+  </g>
+  <g transform="translate(510 150)">
+    <rect x="0" y="0" width="286" height="374" rx="22" fill="#fbfdfb" stroke="#bdd2ce" stroke-width="3"/>
+    <rect x="28" y="34" width="150" height="18" rx="9" fill="#101d2d"/>
+    <rect x="28" y="78" width="224" height="12" rx="6" fill="#789992"/>
+    <rect x="28" y="106" width="194" height="12" rx="6" fill="#789992"/>
+    <g transform="translate(28 154)">
+      <rect width="230" height="52" rx="14" fill="#e0f3ea"/>
+      <circle cx="30" cy="26" r="12" fill="#008c68"/>
+      <rect x="58" y="18" width="132" height="8" rx="4" fill="#101d2d"/>
+    </g>
+    <g transform="translate(28 226)">
+      <rect width="230" height="52" rx="14" fill="#f2ebdc"/>
+      <circle cx="30" cy="26" r="12" fill="#c98b2e"/>
+      <rect x="58" y="18" width="152" height="8" rx="4" fill="#101d2d"/>
+    </g>
+    <g transform="translate(28 298)">
+      <rect width="230" height="52" rx="14" fill="#e0f3ea"/>
+      <circle cx="30" cy="26" r="12" fill="#008c68"/>
+      <rect x="58" y="18" width="112" height="8" rx="4" fill="#101d2d"/>
+    </g>
+  </g>
+</svg>

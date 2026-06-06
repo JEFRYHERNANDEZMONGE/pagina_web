@@ -1,0 +1,32 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Retail execution dashboard</title>
+  <desc id="desc">A dark analytics dashboard with route progress, store evidence and execution status.</desc>
+  <rect width="960" height="720" fill="#0f1727"/>
+  <rect x="84" y="76" width="792" height="568" rx="28" fill="#17243a" stroke="#38536b" stroke-width="3"/>
+  <rect x="124" y="126" width="210" height="468" rx="18" fill="#101d2d"/>
+  <rect x="372" y="126" width="432" height="160" rx="18" fill="#101d2d"/>
+  <rect x="372" y="324" width="192" height="270" rx="18" fill="#101d2d"/>
+  <rect x="604" y="324" width="200" height="270" rx="18" fill="#101d2d"/>
+  <g fill="#39d09b">
+    <rect x="154" y="162" width="120" height="12" rx="6"/>
+    <rect x="402" y="166" width="164" height="14" rx="7"/>
+    <rect x="402" y="366" width="88" height="12" rx="6"/>
+    <rect x="634" y="366" width="96" height="12" rx="6"/>
+  </g>
+  <g fill="#91a8b1">
+    <rect x="154" y="214" width="140" height="10" rx="5"/>
+    <rect x="154" y="256" width="112" height="10" rx="5"/>
+    <rect x="154" y="298" width="152" height="10" rx="5"/>
+    <rect x="154" y="340" width="132" height="10" rx="5"/>
+    <rect x="154" y="382" width="156" height="10" rx="5"/>
+    <rect x="154" y="424" width="104" height="10" rx="5"/>
+    <rect x="402" y="206" width="334" height="10" rx="5"/>
+    <rect x="402" y="236" width="268" height="10" rx="5"/>
+  </g>
+  <polyline points="410,520 450,478 492,498 538,432" fill="none" stroke="#39d09b" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#d59b3e">
+    <rect x="636" y="418" width="34" height="102" rx="10"/>
+    <rect x="690" y="452" width="34" height="68" rx="10"/>
+    <rect x="744" y="394" width="34" height="126" rx="10"/>
+  </g>
+</svg>

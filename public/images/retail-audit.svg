@@ -1,0 +1,38 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Retail execution audit in a supermarket aisle</title>
+  <desc id="desc">Structured supermarket shelves with an auditor reviewing product availability on a mobile checklist.</desc>
+  <rect width="960" height="720" fill="#edf6f2"/>
+  <rect x="80" y="96" width="800" height="488" rx="28" fill="#fbfdfb" stroke="#bdd2ce" stroke-width="3"/>
+  <rect x="128" y="152" width="456" height="368" rx="18" fill="#101d2d"/>
+  <g fill="#d8e8e3">
+    <rect x="160" y="196" width="384" height="18" rx="9"/>
+    <rect x="160" y="286" width="384" height="18" rx="9"/>
+    <rect x="160" y="376" width="384" height="18" rx="9"/>
+    <rect x="160" y="466" width="384" height="18" rx="9"/>
+  </g>
+  <g>
+    <rect x="174" y="228" width="54" height="38" rx="8" fill="#008c68"/>
+    <rect x="248" y="228" width="72" height="38" rx="8" fill="#c98b2e"/>
+    <rect x="340" y="228" width="54" height="38" rx="8" fill="#adc7c2"/>
+    <rect x="414" y="228" width="92" height="38" rx="8" fill="#008c68"/>
+    <rect x="174" y="318" width="92" height="38" rx="8" fill="#c98b2e"/>
+    <rect x="286" y="318" width="54" height="38" rx="8" fill="#adc7c2"/>
+    <rect x="360" y="318" width="72" height="38" rx="8" fill="#008c68"/>
+    <rect x="452" y="318" width="54" height="38" rx="8" fill="#c98b2e"/>
+    <rect x="174" y="408" width="72" height="38" rx="8" fill="#adc7c2"/>
+    <rect x="266" y="408" width="92" height="38" rx="8" fill="#008c68"/>
+    <rect x="378" y="408" width="54" height="38" rx="8" fill="#c98b2e"/>
+    <rect x="452" y="408" width="54" height="38" rx="8" fill="#adc7c2"/>
+  </g>
+  <g transform="translate(628 180)">
+    <circle cx="86" cy="54" r="42" fill="#17293d"/>
+    <rect x="52" y="100" width="88" height="156" rx="38" fill="#008c68"/>
+    <rect x="22" y="126" width="62" height="28" rx="14" fill="#17293d" transform="rotate(-18 53 140)"/>
+    <rect x="128" y="120" width="54" height="154" rx="16" fill="#fbfdfb" stroke="#17293d" stroke-width="8"/>
+    <rect x="142" y="144" width="26" height="4" rx="2" fill="#008c68"/>
+    <rect x="142" y="164" width="26" height="4" rx="2" fill="#adc7c2"/>
+    <rect x="142" y="184" width="26" height="4" rx="2" fill="#adc7c2"/>
+    <path d="M136 298h-78l10-54h58z" fill="#17293d"/>
+  </g>
+  <rect x="112" y="608" width="736" height="4" rx="2" fill="#bdd2ce"/>
+</svg>
