@@ -28,7 +28,7 @@ export function SiteFooter() {
               <p className="mb-4 text-sm font-semibold text-white">Navegación</p>
               <nav className="grid gap-3 text-sm" aria-label="Navegación del footer">
                 {navItems.map((item) => (
-                  <Link key={item.href} href={item.href} className="text-white/62 transition hover:text-white">
+                  <Link key={item.href} href={item.href} className="footer-link text-white/62">
                     {item.label}
                   </Link>
                 ))}
@@ -52,7 +52,7 @@ export function SiteFooter() {
             href="https://zamylabs.com"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 text-sm text-white/45 transition hover:text-white/70"
+            className="footer-link inline-flex items-center gap-3 text-sm text-white/45"
             aria-label="Desarrollado por Zamylabs"
           >
             <span>Desarrollado por</span>

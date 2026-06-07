@@ -1,8 +1,17 @@
-﻿import Image from "next/image";
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { navItems } from "./site-data";
 
 export function SiteHeader() {
+  const pathname = usePathname();
+
+  function isActive(href: string) {
+    return href === "/" ? pathname === "/" : pathname.startsWith(href);
+  }
+
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
@@ -23,7 +32,8 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="px-1 py-2 text-sm font-medium text-ink-muted transition hover:text-ink"
+              aria-current={isActive(item.href) ? "page" : undefined}
+              className="nav-link px-1 py-2 text-sm font-medium text-ink-muted"
             >
               {item.label}
             </Link>
@@ -32,7 +42,7 @@ export function SiteHeader() {
 
         <Link
           href="/#contacto"
-          className="hidden bg-night px-4 py-2 text-sm font-semibold text-white transition hover:bg-night-panel sm:inline-flex"
+          className="nav-cta hidden bg-evidence px-4 py-2 text-sm font-semibold text-night sm:inline-flex"
         >
           Hablar
         </Link>
@@ -47,14 +57,15 @@ export function SiteHeader() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="px-3 py-3 text-sm font-semibold text-ink-muted transition hover:bg-surface-muted hover:text-ink"
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  className="nav-link px-3 py-3 text-sm font-semibold text-ink-muted"
                 >
                   {item.label}
                 </Link>
               ))}
               <Link
                 href="/#contacto"
-                className="mt-2 bg-night px-3 py-3 text-center text-sm font-semibold text-white transition hover:bg-night-panel"
+                className="nav-cta mt-2 bg-evidence px-3 py-3 text-center text-sm font-semibold text-night"
               >
                 Hablar sobre su operación
               </Link>

@@ -1,5 +1,7 @@
-﻿import Image from "next/image";
+import Image from "next/image";
+import type { CSSProperties } from "react";
 import { ContactForm } from "@/components/contact-form";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 const metrics = [
   { value: "4", label: "Clientes clave (9+ años)" },
@@ -61,6 +63,7 @@ const contactItems = [
 export default function HomePage() {
   return (
     <div className="bg-transparent text-ink">
+      <ScrollReveal />
       <section className="hero-command relative overflow-hidden bg-night text-white">
         <div className="absolute inset-0 opacity-75">
           <Image
@@ -72,7 +75,6 @@ export default function HomePage() {
             className="object-cover object-[48%_45%]"
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,29,34,0.94)_0%,rgba(10,29,34,0.80)_38%,rgba(10,29,34,0.28)_70%,rgba(10,29,34,0.10)_100%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_38%,rgba(122,178,71,0.24),transparent_34rem)]" />
         </div>
 
         <div className="hero-command-grid relative mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 sm:py-20 lg:min-h-[760px] lg:grid-cols-[minmax(0,0.82fr)_minmax(360px,0.58fr)] lg:items-end lg:px-8 lg:py-12">
@@ -109,22 +111,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="metodo" className="home-section bg-[linear-gradient(180deg,var(--surface-strong)_0%,var(--surface-muted)_100%)]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] lg:gap-20">
-            <div className="lg:sticky lg:top-28 lg:self-start">
+      <section id="metodo" className="home-section process-section relative overflow-hidden">
+        <div className="process-orbit" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="process-command">
+            <div className="process-command-copy" data-reveal>
               <h2 className="text-ink">Nuestro proceso de trabajo: precisión en cada visita</h2>
               <p className="lead mt-5 text-ink-muted">
                 Garantizamos la integridad de sus datos mediante una metodología rigurosa de cuatro fases, diseñada para transformar la observación de campo en decisiones estratégicas de alta rentabilidad.
               </p>
             </div>
 
-            <div className="border-y border-border">
+            <div className="process-rail" aria-label="Proceso de trabajo">
               {processSteps.map((item, index) => (
-                <article key={item.step} className="grid gap-4 border-b border-border py-6 last:border-b-0 sm:grid-cols-[6.5rem_minmax(0,1fr)] sm:gap-8 sm:py-7">
-                  <p className="font-display text-3xl font-bold leading-none text-accent-strong sm:text-4xl">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
+                <article
+                  key={item.step}
+                  className="process-step"
+                  data-reveal
+                  style={{ "--i": index } as CSSProperties}
+                >
+                  <p className="process-step-number">{String(index + 1).padStart(2, "0")}</p>
                   <div>
                     <h3 className="text-ink">{item.title}</h3>
                     <p className="mt-2 text-sm leading-7 text-ink-muted">{item.text}</p>
@@ -136,21 +142,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="servicios" className="home-section bg-[linear-gradient(180deg,var(--background)_0%,var(--surface)_100%)]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:gap-20">
-            <div>
+      <section id="servicios" className="home-section services-section relative overflow-hidden">
+        <div className="services-grid-field" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="services-editorial">
+            <div className="services-intro" data-reveal>
               <h2 className="text-ink">Nuestras soluciones especializadas</h2>
               <p className="lead mt-4 text-ink-muted">
                 Potenciamos su marca en el retail mediante servicios integrales de desarrollo comercial, registro de productos y colocación en punto de venta.
               </p>
             </div>
-            <div className="service-index">
+            <div className="service-ledger">
               {services.map((service, index) => (
-                <article key={service.title} className="service-row">
+                <article
+                  key={service.title}
+                  className="service-ledger-item"
+                  data-reveal
+                  style={{ "--i": index } as CSSProperties}
+                >
                   <p className="service-row-number">{String(index + 1).padStart(2, "0")}</p>
-                  <h3 className="text-ink lg:max-w-[16rem]">{service.title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-ink-muted">{service.text}</p>
+                  <h3 className="text-ink">{service.title}</h3>
+                  <p className="text-sm leading-7 text-ink-muted">{service.text}</p>
                 </article>
               ))}
             </div>
@@ -158,27 +170,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="sistema" className="home-section bg-[linear-gradient(135deg,var(--night)_0%,var(--accent-strong)_58%,var(--night-panel)_100%)] text-white">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20 lg:px-8">
-          <div>
+      <section id="sistema" className="home-section system-section relative overflow-hidden text-white">
+        <div className="system-beam" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:gap-16 lg:px-8">
+          <div className="system-copy" data-reveal>
             <h2>Información crítica en tiempo real</h2>
             <p className="lead mt-5 text-white/78">
               Nuestra plataforma tecnológica exclusiva permite una visibilidad total sobre la ejecución en punto de venta. Transformamos cada visita en un conjunto de datos estructurados accesibles desde cualquier dispositivo.
             </p>
-            <div className="mt-9 grid border-y border-night-line sm:grid-cols-2">
-              {technology.map((item) => (
-                <div key={item.title} className="border-b border-night-line py-5 sm:odd:border-r sm:even:pl-6 sm:last:border-b-0 sm:[&:nth-last-child(2)]:border-b-0">
+            <div className="system-capabilities">
+              {technology.map((item, index) => (
+                <div key={item.title} className="system-capability" data-reveal style={{ "--i": index } as CSSProperties}>
                   <h3 className="text-white">{item.title}</h3>
-                  <p className="mt-1 text-sm text-white/78">{item.text}</p>
+                  <p className="mt-1 text-sm text-white/76">{item.text}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="software-frame">
+          <div className="software-frame" data-reveal="right">
             <Image
-              src="/images/retail-dashboard.svg"
-              alt="Retail software dashboard"
+              src="/images/foto_sistema.webp"
+              alt="Panel de control retail con indicadores de ejecución comercial"
               width={960}
               height={720}
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -190,7 +203,7 @@ export default function HomePage() {
 
       <section id="contacto" className="home-section bg-[linear-gradient(180deg,var(--surface-muted)_0%,var(--background)_100%)]">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:gap-20 lg:px-8">
-          <div>
+          <div data-reveal>
             <h2 className="text-ink">Potencie su presencia comercial</h2>
             <p className="lead mt-5 text-ink-muted">
               Estamos listos para elevar el estándar de su marca en el mercado retail costarricense con soluciones enfocadas en retorno de inversión.
@@ -204,8 +217,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-
-          <div>
+          <div data-reveal>
             <ContactForm />
           </div>
         </div>

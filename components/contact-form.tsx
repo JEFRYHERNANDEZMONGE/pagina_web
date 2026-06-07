@@ -9,7 +9,6 @@ type ContactFormState = {
   company: string;
   role: string;
   phone: string;
-  service: string;
   message: string;
 };
 
@@ -18,7 +17,6 @@ const initialState: ContactFormState = {
   company: "",
   role: "",
   phone: "",
-  service: "Desarrollo comercial en punto de venta",
   message: "",
 };
 
@@ -30,7 +28,6 @@ function buildWhatsAppMessage(values: ContactFormState) {
     `Empresa: ${values.company}`,
     values.role ? `Cargo: ${values.role}` : null,
     `Teléfono: ${values.phone}`,
-    `Servicio de interés: ${values.service}`,
     "",
     "Mensaje:",
     values.message,
@@ -135,24 +132,6 @@ export function ContactForm() {
           placeholder="+506"
           type="tel"
         />
-      </div>
-      <div className="md:col-span-2">
-        <label htmlFor="contact-service" className="mb-2 block text-sm font-semibold text-ink">
-          Servicio de interés
-        </label>
-        <select
-          id="contact-service"
-          name="servicio"
-          required
-          value={values.service}
-          onChange={(event) => updateField("service", event.target.value)}
-          className="w-full border border-border-strong px-4 py-3 text-base transition focus:border-accent-strong"
-        >
-          <option>Desarrollo comercial en punto de venta</option>
-          <option>Registro de productos</option>
-          <option>Servicio de Colocación de productos</option>
-          <option>Otro</option>
-        </select>
       </div>
       <div className="md:col-span-2">
         <label htmlFor="contact-message" className="mb-2 block text-sm font-semibold text-ink">
