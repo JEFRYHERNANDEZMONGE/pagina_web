@@ -13,9 +13,9 @@ export default function EmpresaPage() {
   return (
     <div className="bg-background text-ink">
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-        <h1 className="max-w-4xl text-4xl font-bold text-ink sm:text-5xl">Liderazgo en Auditoría Retail en Costa Rica</h1>
+        <h1 className="max-w-4xl text-4xl font-bold text-ink sm:text-5xl">Liderazgo en Ejecución Comercial Retail en Costa Rica</h1>
         <p className="mt-6 max-w-3xl text-lg leading-8 text-ink-muted">
-          HM Sucomer es el referente indiscutible en la precisión de datos para el punto de venta. Con una trayectoria sólida en el mercado local, transformamos la auditoría en decisiones estratégicas.
+          HM Sucomer es el referente indiscutible en la precisión de datos para el punto de venta. Con una trayectoria sólida en el mercado local, convertimos la ejecución comercial en decisiones estratégicas.
         </p>
         <div className="mt-8 h-1 w-24 bg-accent" />
       </section>
@@ -25,7 +25,7 @@ export default function EmpresaPage() {
           <article className="rounded-2xl border border-border bg-surface p-8 md:col-span-7">
             <h2 className="text-3xl font-bold text-ink">Trayectoria</h2>
             <p className="mt-4 text-sm leading-7 text-ink-muted">
-              Fundada el <strong className="text-ink">1 de junio de 2015</strong>, HM Sucomer nació bajo la premisa de la excelencia operativa y ha evolucionado hasta convertirse en un pilar de la auditoría retail en el país.
+              Fundada el <strong className="text-ink">1 de junio de 2015</strong>, HM Sucomer nació bajo la premisa de la excelencia operativa y ha evolucionado hasta convertirse en un pilar de la ejecución comercial retail en el país.
             </p>
             <p className="mt-4 text-sm leading-7 text-ink-muted">
               Hoy operamos con presencia en cadenas clave como <strong className="text-ink">Walmart, Automercado, Megasuper y Gessa</strong>.

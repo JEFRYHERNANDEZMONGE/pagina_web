@@ -14,8 +14,8 @@ export function SiteFooter() {
                 alt="HM Sucomer"
                 width={2160}
                 height={1689}
-                sizes="144px"
-                className="h-14 w-auto brightness-0 invert sm:h-16"
+                sizes="288px"
+                className="h-28 w-auto brightness-0 invert sm:h-32"
               />
             </Link>
             <p className="mt-6 max-w-xl text-base leading-7 text-white/62">
@@ -28,7 +28,7 @@ export function SiteFooter() {
               <p className="mb-4 text-sm font-semibold text-white">Navegación</p>
               <nav className="grid gap-3 text-sm" aria-label="Navegación del footer">
                 {navItems.map((item) => (
-                  <Link key={item.href} href={item.href} className="footer-link text-white/62">
+                  <Link key={item.href} href={item.href} className="text-white/62 transition hover:text-white">
                     {item.label}
                   </Link>
                 ))}
@@ -52,7 +52,7 @@ export function SiteFooter() {
             href="https://zamylabs.com"
             target="_blank"
             rel="noreferrer"
-            className="footer-link inline-flex items-center gap-3 text-sm text-white/45"
+            className="inline-flex items-center gap-3 text-sm text-white/45 transition hover:text-white/70"
             aria-label="Desarrollado por Zamylabs"
           >
             <span>Desarrollado por</span>

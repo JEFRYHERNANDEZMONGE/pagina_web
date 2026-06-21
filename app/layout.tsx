@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "HM Sucomer",
-  description: "Ejecución, auditoría y tecnología retail en Costa Rica.",
+  description: "Ejecución, seguimiento y tecnología retail en Costa Rica.",
 };
 
 export default function RootLayout({

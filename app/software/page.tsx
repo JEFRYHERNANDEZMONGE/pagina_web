@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const platformItems = [
   {
-    title: 'App Móvil para Auditores',
+    title: 'App móvil para equipo comercial',
     text: 'Diseñada para la máxima eficiencia en el punto de venta. Permite recolectar datos estructurados, capturar evidencia fotográfica y registrar métricas críticas.',
     tags: ['iOS & Android', 'Captura Fotográfica', 'Validación por GPS'],
   },
@@ -21,7 +21,7 @@ const capabilities = [
   },
   {
     title: 'Geolocalización de Visitas',
-    text: 'Validamos que cada auditoría se realice en las coordenadas exactas del punto de venta asignado.',
+    text: 'Validamos que cada visita se realice en las coordenadas exactas del punto de venta asignado.',
   },
   {
     title: 'Dashboards en Real Time',
@@ -62,7 +62,7 @@ export default function SoftwarePage() {
           <div className="relative">
             <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUOVvEX6oWdBMSq_G0AG9V0y37d_TXGq2DM_fPtIJdb-sf8-i8fTjbI4-AXAGz259nlqyRnQ0GyKLmaUpJxcUpbarnLpQmsHaGbkPtaL8dFo2RuYoX-hyaNYUtyevOCg6dP01isZ2aT1KkYT9HxKei_4mtHpIY01A5UhhfRM-kTH5-GPiGtGJIQZa8i5-javueFcd7W6hgwFl4ajSKK4aolP2lS7w7lcSbghDXe-SaVsyFWentI3N3fPQU93tXfjluupfJDifE-iw"
-              alt="Dashboard del sistema de auditoría retail"
+              alt="Dashboard del sistema de control retail"
               width={1120}
               height={630}
               priority

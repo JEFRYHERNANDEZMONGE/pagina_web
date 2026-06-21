@@ -4,13 +4,13 @@ import Link from "next/link";
 const steps = [
   {
     title: 'Paso 1: Planificación Semanal',
-    text: 'Planificación de rutas semanal cada lunes, definiendo puntos críticos y objetivos de auditoría para asegurar cobertura estratégica.',
+    text: 'Planificación de rutas semanal cada lunes, definiendo puntos críticos y objetivos de ejecución comercial para asegurar cobertura estratégica.',
     meta: 'TODOS LOS LUNES',
     number: '01',
   },
   {
     title: 'Paso 2: Ejecución y Tareas',
-    text: 'Al llegar al punto de venta, nuestros auditores ejecutan tareas específicas con agilidad para garantizar datos precisos sin interrupciones.',
+    text: 'Al llegar al punto de venta, nuestro equipo comercial ejecuta tareas específicas con agilidad para garantizar datos precisos sin interrupciones.',
     meta: '',
     number: '02',
   },
@@ -101,7 +101,7 @@ export default function MetodologiaPage() {
           <div>
             <h2 className="text-3xl font-bold sm:text-4xl">Garantía de Veracidad Tecnológica</h2>
             <p className="mt-6 text-lg leading-8 text-white/78">
-              En HM Sucomer, la veracidad de los datos está respaldada por tecnología de punta. Nuestra aplicación de auditoría integra protocolos de seguridad infranqueables.
+              En HM Sucomer, la veracidad de los datos está respaldada por tecnología de punta. Nuestra aplicación de seguimiento comercial integra protocolos de seguridad infranqueables.
             </p>
             <ul className="mt-8 space-y-3 text-sm leading-7 text-white/78">
               {truth.map((item) => (

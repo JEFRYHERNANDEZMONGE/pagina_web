@@ -43,12 +43,6 @@ next-env.d.ts
 # local git worktrees
 .worktrees/
 
-# Playwright / MCP local artifacts
+# local browser automation artifacts
 .playwright-mcp/
-playwright-report/
-test-results/
-blob-report/
-playwright/.cache/
-
-# Impeccable local artifacts
-.impeccable/
+node_modules
