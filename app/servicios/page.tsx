@@ -107,10 +107,10 @@ export default function ServiciosPage() {
             <Reveal className="reveal-panel bg-night px-6 py-6 text-white sm:px-7">
               <p className="text-sm font-semibold leading-6 text-evidence-soft">Criterio de trabajo</p>
               <p className="mt-4 text-base font-semibold leading-7 text-white">
-                Alcance por canal, producto, frecuencia y evidencia requerida.
+                El alcance se define por canal, producto, frecuencia y nivel de evidencia necesario.
               </p>
               <p className="mt-3 text-sm leading-7 text-white/78">
-                El alcance se define por canal, producto, frecuencia y nivel de evidencia necesario. No por una lista cerrada de tareas.
+                No trabajamos con una lista cerrada de tareas. Cada servicio se ajusta a lo que la operación realmente necesita.
               </p>
             </Reveal>
           </div>
@@ -176,7 +176,7 @@ export default function ServiciosPage() {
               {operatingSignals.map((signal) => (
                 <Reveal key={signal.label} className="reveal-rise border border-night-line bg-night-panel px-5 py-5 lg:flex-1">
                   <p className="text-xs font-bold tracking-[0.04em] text-evidence-soft">{signal.label}</p>
-                  <p className="mt-4 text-base font-bold leading-7 text-white">Punto de control operativo</p>
+                  <p className="mt-4 text-base font-bold leading-7 text-white">{signal.label}</p>
                   <p className="mt-3 text-sm leading-7 text-white/76">{signal.text}</p>
                 </Reveal>
               ))}

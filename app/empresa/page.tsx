@@ -81,10 +81,13 @@ export default function EmpresaPage() {
             <h2 className="mt-4 text-3xl font-bold text-ink">Trayectoria</h2>
             <p className="mt-5 text-xl font-bold leading-8 text-night">Diez años construyendo presencia comercial en cadenas clave.</p>
             <p className="mt-4 text-sm leading-7 text-ink-muted">
-              Fundada el <strong className="text-ink">1 de junio de 2015</strong>, HM Sucomer nació bajo la premisa de la excelencia operativa y ha evolucionado hasta convertirse en un pilar de la ejecución comercial retail en el país.
+              HM Sucomer se fundó el <strong className="text-ink">1 de junio de 2015</strong> con un propósito claro: profesionalizar la gestión de mercaderistas y la supervisión comercial en el punto de venta. Desde entonces, la empresa creció en cobertura y especialización, pasando de un equipo pequeño a una operación con alcance nacional.
             </p>
             <p className="mt-4 text-sm leading-7 text-ink-muted">
-              Hoy operamos con presencia en cadenas clave como <strong className="text-ink">Walmart, Automercado, Megasuper y Gessa</strong>.
+              En estos diez años consolidamos procesos de supervisión, modelos de cobertura por cadena y una capacidad de ejecución en piso de venta que responde a las necesidades de cada categoría. No crecimos solo en tamaño: mejoramos en auditoría de anaquel, control operativo y respuesta ante incidencias.
+            </p>
+            <p className="mt-4 text-sm leading-7 text-ink-muted">
+              Hoy operamos con <strong className="text-ink">3 supervisores comerciales</strong> y <strong className="text-ink">74 mercaderistas</strong>, distribuidos en cadenas clave del retail costarricense: <strong className="text-ink">345 puntos en Walmart</strong>, <strong className="text-ink">62 en Megasuper</strong>, <strong className="text-ink">56 en Gessa</strong> y <strong className="text-ink">40 en Automercado</strong>. Diez años de trabajo sostenido respaldan cada visita.
             </p>
           </Reveal>
           <Reveal className="reveal-image relative overflow-hidden border border-border md:col-span-5" delay={120}>
@@ -110,7 +113,7 @@ export default function EmpresaPage() {
             <h3 className="mt-4 text-2xl font-bold text-ink">Nuestra Visión</h3>
             <p className="mt-5 text-lg font-bold leading-7 text-night">Ser referencia regional en supervisión comercial responsable.</p>
             <p className="mt-3 text-sm leading-7 text-ink-muted">
-              Consolidarnos como el líder del mercado en desarrollo y supervisión comercial a bajo costo, estableciendo el estándar de eficiencia en Centroamérica.
+              Consolidarnos como referente en desarrollo y supervisión comercial en Centroamérica, con un estándar de eficiencia reconocido por nuestros clientes.
             </p>
           </Reveal>
         </div>
@@ -163,10 +166,10 @@ export default function EmpresaPage() {
             <h2 className="text-ink">Un equipo de campo con estructura nacional</h2>
             <p className="mt-6 text-xl font-bold leading-8 text-night">Supervisión experta y red externa para sostener cobertura.</p>
             <p className="lead mt-4 text-ink-muted">
-              Contamos con una estructura robusta compuesta por <strong className="text-ink">5 supervisores expertos</strong> y una red de <strong className="text-ink">más de 70 colaboradores externos</strong> altamente capacitados.
+              Contamos con <strong className="text-ink">3 supervisores comerciales</strong> y una red de <strong className="text-ink">74 mercaderistas</strong> distribuidos en todo el país.
             </p>
             <p className="mt-4 text-sm leading-7 text-ink-muted">
-              Este equipo garantiza consistencia de información y ejecución impecable en cada rincón del país.
+              Esta estructura nos permite mantener consistencia en la información y calidad de ejecución en cada punto de venta.
             </p>
             <Link href="/#contacto" className="mt-8 inline-block border border-ink px-6 py-3 font-semibold text-ink transition hover:bg-night hover:text-white">
               Contactar al equipo
@@ -186,7 +189,7 @@ export default function EmpresaPage() {
             <h2 className="mt-4 text-white">Cobertura 100% nacional</h2>
             <p className="mt-5 text-xl font-bold leading-8 text-white">Rutas coordinadas según frecuencia, canal y necesidad de seguimiento.</p>
             <p className="mt-4 text-sm leading-7 text-white/78">
-              Presencia operativa en las 7 provincias de Costa Rica, con rutas coordinadas según frecuencia, canal y necesidad de seguimiento.
+              Operamos en las 7 provincias de Costa Rica, con capacidad para ajustar cobertura según la demanda comercial de cada cliente.
             </p>
           </Reveal>
 
@@ -222,8 +225,8 @@ export default function EmpresaPage() {
       <section className="home-section">
         <Reveal className="reveal-panel mx-auto grid max-w-7xl gap-8 bg-night px-4 py-10 text-white sm:px-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:px-10">
           <div>
-            <h2>Construyamos el futuro del retail</h2>
-            <p className="lead mt-4 max-w-3xl text-white/78">Aliados de Walmart, Automercado, Megasuper, Gessa y más. Estamos listos para potenciar su marca.</p>
+            <h2>Ejecución comercial con respaldo nacional</h2>
+            <p className="lead mt-4 max-w-3xl text-white/78">Trabajamos con Walmart, Automercado, Megasuper, Gessa y otras cadenas del retail costarricense. Cuéntenos qué necesita y le proponemos un alcance realista.</p>
           </div>
           <Link href="/#contacto" className="inline-block bg-evidence px-8 py-4 text-center text-lg font-semibold text-night transition hover:brightness-110">
             Contactar a un consultor

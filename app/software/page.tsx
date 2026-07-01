@@ -13,11 +13,11 @@ const platformItems = [
   },
   {
     title: "Dashboard web para clientes",
-    role: "Lectura para decisión",
-    focus: "La información debe poder leerse sin reconstruirla.",
+    role: "Información para decidir",
+    focus: "Los datos deben llegar listos para actuar, no para reinterpretarse.",
     text: "Ordena la información por cliente, cadena, tienda y hallazgo para revisar ejecución sin depender de hojas sueltas.",
     proof: "Sirve para priorizar acciones y sostener conversaciones comerciales con evidencia.",
-    details: ["Filtros comerciales", "Alertas de seguimiento", "Exportes ejecutivos"],
+    details: ["Filtros comerciales", "Alertas de seguimiento", "Reportes exportables"],
   },
 ];
 
@@ -93,10 +93,10 @@ export default function SoftwarePage() {
             <Reveal className="reveal-panel bg-night px-6 py-6 text-white sm:px-7">
               <p className="text-sm font-semibold leading-6 text-evidence-soft">Problema que resuelve</p>
               <p className="mt-4 text-base font-semibold leading-7 text-white">
-                Reportes tardíos, incompletos o dispersos vuelven reactiva la conversación comercial.
+                Cuando los reportes llegan tarde, incompletos o dispersos, la conversación comercial se vuelve reactiva.
               </p>
               <p className="mt-3 text-sm leading-7 text-white/76">
-                Cuando los reportes llegan tarde, incompletos o dispersos, la conversación comercial se vuelve reactiva. La plataforma reduce esa fricción.
+                La plataforma centraliza la captura, validación y entrega de datos para que su equipo decida con información reciente y verificable.
               </p>
             </Reveal>
           </div>
@@ -137,7 +137,7 @@ export default function SoftwarePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,0.58fr)_minmax(18rem,0.42fr)] lg:items-end">
             <Reveal className="reveal-rise max-w-3xl">
-              <h2 className="text-ink">Cadena de confianza del dato</h2>
+              <h2 className="text-ink">Trazabilidad del dato</h2>
               <p className="lead mt-5 max-w-2xl text-ink-muted">
                 Cada registro pasa por controles que reducen dudas operativas: captura, ubicación, evidencia y salida formal para revisión.
               </p>
@@ -155,7 +155,7 @@ export default function SoftwarePage() {
               {trustChain.map((item) => (
                 <article key={item.step} className="relative">
                   <span aria-hidden="true" className="relative z-10 block h-6 w-6 bg-evidence ring-8 ring-night" />
-                  <p className="mt-5 text-xs font-bold tracking-[0.04em] text-evidence-soft">Control de dato</p>
+                  <p className="mt-5 text-xs font-bold tracking-[0.04em] text-evidence-soft">Control</p>
                   <h3 className="mt-3 text-xl font-bold text-white">{item.step}</h3>
                   <p className="mt-3 text-sm leading-7 text-white/76">{item.text}</p>
                 </article>

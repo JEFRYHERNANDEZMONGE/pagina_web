@@ -76,7 +76,7 @@ export function ServicesScroll({ services }: { services: ServiceItem[] }) {
           <Reveal className="services-scroll-copy reveal-rise">
             <h2 className="text-ink">Nuestras soluciones especializadas</h2>
             <p className="lead mt-4 text-ink-muted">
-              Potenciamos su marca en el retail mediante servicios integrales de desarrollo comercial, registro de productos y colocación en punto de venta.
+              Tres frentes de trabajo para gestionar su presencia en punto de venta: desarrollo comercial, registro de productos y colocación en anaquel.
             </p>
           </Reveal>
 

@@ -26,7 +26,7 @@ const steps = [
   },
   {
     title: "Entrega de reportes diarios",
-    focus: "El cliente recibe una salida revisable.",
+    focus: "Cada mañana, el cliente tiene información para actuar.",
     text: "Cada mañana, usted recibe informes consolidados con los hallazgos del día anterior para tomar decisiones con información reciente.",
     meta: "Reportes matutinos",
     number: "04",
@@ -57,8 +57,8 @@ const cycle = [
 ];
 const truth = [
   "Geolocalización GPS obligatoria para cada registro de visita.",
-  "Evidencia fotográfica en tiempo real in situ.",
-  "Estampado de tiempo digital e inalterable.",
+  "Evidencia fotográfica en tiempo real desde el punto de venta.",
+  "Marca de tiempo digital inalterable.",
 ];
 
 export default function MetodologiaPage() {
@@ -152,7 +152,7 @@ export default function MetodologiaPage() {
                     <h3 className={`mt-4 text-2xl font-bold ${index === 0 || index === 3 ? "text-white" : "text-ink"}`}>{item.title}</h3>
                   </div>
                   <div className="mt-8 border-t border-current/20 pt-4">
-                    <p className={`text-sm font-bold leading-6 ${index === 0 || index === 3 ? "text-white" : "text-night"}`}>Decisión que habilita</p>
+                    <p className={`text-sm font-bold leading-6 ${index === 0 || index === 3 ? "text-white" : "text-night"}`}>Qué permite</p>
                     <p className={`mt-2 text-sm leading-7 ${index === 0 || index === 3 ? "text-white/78" : "text-ink-muted"}`}>{item.text}</p>
                   </div>
                 </Reveal>
@@ -175,9 +175,9 @@ export default function MetodologiaPage() {
             />
           </Reveal>
           <Reveal className="reveal-rise" delay={140}>
-            <h2 className="text-white">Veracidad tecnológica</h2>
+            <h2 className="text-white">Datos verificables</h2>
             <p className="lead mt-6 text-white/78">
-              La veracidad de los datos está respaldada por registros técnicos que reducen margen de error y sostienen trazabilidad.
+              Cada registro cuenta con respaldos técnicos que reducen el margen de error y garantizan trazabilidad.
             </p>
             <ul className="mt-8 border-y border-night-line text-sm leading-7 text-white/78">
               {truth.map((item) => (
@@ -195,13 +195,13 @@ export default function MetodologiaPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal className="reveal-panel grid gap-8 border border-border bg-surface p-8 sm:p-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
             <div>
-              <h2 className="text-ink">¿Listo para elevar la precisión de su ejecución?</h2>
+              <h2 className="text-ink">Hablemos de su operación</h2>
               <p className="lead mt-4 max-w-2xl text-ink-muted">
-              Permítanos presentarle cómo nuestra metodología puede adaptarse específicamente a los retos de su categoría.
+              Cuéntenos qué canal, categoría o cadena necesita cubrir. Le proponemos una metodología adaptada a su realidad comercial.
               </p>
             </div>
             <Link href="/#contacto" className="inline-block bg-evidence px-8 py-4 text-center text-lg font-semibold text-night transition hover:brightness-110">
-              Hablemos de su metodología
+              Hablemos
             </Link>
           </Reveal>
         </div>

@@ -44,22 +44,22 @@ const processSteps = [
 const services = [
   {
     title: "Desarrollo comercial en punto de venta",
-    text: "Optimización de la presencia de marca mediante estrategias de visibilidad, cumplimiento de acuerdos comerciales y gestión activa en anaquel.",
+    text: "Mejoramos la presencia de marca en anaquel: revisamos visibilidad, cumplimiento de acuerdos comerciales y oportunidades de mejora por tienda.",
   },
   {
     title: "Registro de productos",
-    text: "Gestión profesional para el registro y actualización de productos ante las autoridades correspondientes y cadenas comerciales, asegurando el cumplimiento legal.",
+    text: "Gestionamos el registro y actualización de productos ante autoridades sanitarias y cadenas comerciales, con seguimiento hasta la aprobación final.",
   },
   {
-    title: "Servicio de colocación de productos",
-    text: "Ejecución física de colocación, rotación de inventarios y mantenimiento de exhibiciones para garantizar que el producto esté siempre disponible y atractivo.",
+    title: "Colocación de productos",
+    text: "Ejecutamos colocación, rotación de inventario y mantenimiento de exhibiciones para que el producto esté disponible y bien presentado en todo momento.",
   },
 ];
 
 const technology = [
   { title: "Captura digital", text: "Levantamiento directo en tienda." },
-  { title: "Reportes Real-Time", text: "KPIs actualizados al instante." },
-  { title: "Multi-Canal", text: "Control centralizado nacional." },
+  { title: "Reportes en tiempo real", text: "Indicadores actualizados al instante." },
+  { title: "Multicanal", text: "Control centralizado a nivel nacional." },
   { title: "Respaldo fotográfico", text: "Evidencia visual de ejecución." },
 ];
 
@@ -95,7 +95,7 @@ export default function HomePage() {
               Impulsamos sus productos en supermercados de Costa Rica
             </h1>
             <p className="lead reveal-motion reveal-rise is-visible mt-6 max-w-2xl text-white/82 [--reveal-delay:340ms]">
-              En HM Sucomer no solo reportamos datos; tomamos acción inmediata en el punto de venta para asegurar que su marca domine el mercado costarricense.
+              En HM Sucomer no solo reportamos datos: actuamos en el punto de venta para que su marca compita mejor en el mercado costarricense.
             </p>
             <div className="reveal-motion reveal-rise is-visible mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row [--reveal-delay:460ms]">
               <a href="#contacto" className="bg-evidence px-6 py-3.5 text-center text-base font-semibold text-night transition hover:brightness-110 sm:px-8 sm:py-4 sm:text-lg">
@@ -129,7 +129,7 @@ export default function HomePage() {
           <Reveal className="reveal-rise">
             <h2>Información crítica en tiempo real</h2>
             <p className="lead mt-5 text-white/78">
-              Nuestra plataforma tecnológica exclusiva permite una visibilidad total sobre la ejecución en punto de venta. Transformamos cada visita en un conjunto de datos estructurados accesibles desde cualquier dispositivo.
+              Nuestra plataforma centraliza la información de cada visita y le da visibilidad completa sobre la ejecución en punto de venta, desde cualquier dispositivo.
             </p>
             <div className="mt-9 grid border-y border-night-line sm:grid-cols-2">
               {technology.map((item) => (
@@ -159,7 +159,7 @@ export default function HomePage() {
           <Reveal className="reveal-rise">
             <h2 className="text-ink">Potencie su presencia comercial</h2>
             <p className="lead mt-5 text-ink-muted">
-              Estamos listos para elevar el estándar de su marca en el mercado retail costarricense con soluciones enfocadas en retorno de inversión.
+              Cuéntenos qué necesita resolver en el mercado retail costarricense y le proponemos un plan de trabajo a medida.
             </p>
             <div className="mt-9 border-y border-border">
               {contactItems.map((item) => (
