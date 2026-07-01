@@ -12,7 +12,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-4 lg:gap-6 lg:px-8 lg:py-3 xl:py-4">
         <Link href="/" className="inline-flex items-center" aria-label="HM Sucomer, inicio">
           <Image
             src="/Logo Jefry.png"
@@ -20,12 +20,12 @@ export function SiteHeader() {
             width={2160}
             height={1689}
             priority
-            sizes="128px"
-            className="h-[3.75rem] w-auto sm:h-[4.1rem]"
+            sizes="(min-width: 1280px) 184px, (min-width: 1024px) 171px, 128px"
+            className="h-[3.75rem] w-auto sm:h-[4.1rem] lg:h-[5.35rem] xl:h-[5.75rem]"
           />
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-6 md:flex lg:gap-8 xl:gap-9">
           {navItems.map((item) => {
             const active = isActive(item.href);
 
@@ -34,7 +34,7 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`relative px-1 py-2 text-sm font-medium transition duration-200 hover:scale-[1.04] hover:text-ink ${
+                className={`relative px-1 py-2 text-sm font-medium transition duration-200 hover:scale-[1.04] hover:text-ink lg:text-[1.14rem] xl:text-[1.225rem] ${
                   active
                     ? "text-ink after:absolute after:inset-x-1 after:bottom-1 after:h-0.5 after:bg-evidence"
                     : "text-ink-muted"
@@ -48,7 +48,7 @@ export function SiteHeader() {
 
         <Link
           href="/#contacto"
-          className="hidden bg-evidence px-4 py-2 text-sm font-bold text-night transition duration-200 hover:scale-[1.04] hover:brightness-105 sm:inline-flex"
+          className="hidden bg-evidence px-4 py-2 text-sm font-bold text-white transition duration-200 hover:scale-[1.04] hover:brightness-105 sm:inline-flex lg:px-5 lg:py-2.5 lg:text-[1.14rem] xl:px-6 xl:py-3 xl:text-[1.225rem]"
         >
           Hablemos
         </Link>
@@ -81,7 +81,7 @@ export function SiteHeader() {
               })}
               <Link
                 href="/#contacto"
-                className="mt-2 bg-evidence px-3 py-3 text-center text-sm font-bold text-night transition duration-200 hover:scale-[1.02] hover:brightness-105"
+                className="mt-2 bg-evidence px-3 py-3 text-center text-sm font-bold text-white transition duration-200 hover:scale-[1.02] hover:brightness-105"
               >
                 Hablemos
               </Link>
